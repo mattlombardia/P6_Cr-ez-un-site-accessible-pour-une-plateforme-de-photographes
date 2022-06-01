@@ -24,7 +24,7 @@ async function getPhotographers() {
   return {
     photographers: [...photographers, ...photographers, ...photographers],
   };
-  console.table;
+  console.log();
 }
 
 async function displayData(photographers) {
@@ -41,6 +41,8 @@ async function init() {
   // Récupère les datas des photographes
   const { photographers } = await getPhotographers();
   displayData(photographers);
+    console.log();
+
 }
 
 init();
