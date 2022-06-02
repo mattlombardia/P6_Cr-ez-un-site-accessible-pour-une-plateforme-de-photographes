@@ -20,11 +20,16 @@ async function getPhotographers() {
       portrait: "account.png",
     },
   ];
+console.table(photographers)
+
+console.time('tracker')
+console.timeEnd('tracker');
+
+
   // et bien retourner le tableau photographers seulement une fois
   return {
     photographers: [...photographers, ...photographers, ...photographers],
   };
-  console.log();
 }
 
 async function displayData(photographers) {
@@ -41,8 +46,9 @@ async function init() {
   // Récupère les datas des photographes
   const { photographers } = await getPhotographers();
   displayData(photographers);
-    console.log();
-
 }
+console.table(init);
+
+
 
 init();
