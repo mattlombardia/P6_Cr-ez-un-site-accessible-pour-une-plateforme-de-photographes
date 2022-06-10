@@ -1,67 +1,18 @@
-async function getPhotographers() {
   // Penser à remplacer par les données récupérées dans le json
-  const photographers = [
-    // {
-    //   name: "Ma data test",
-    //   id: 1,
-    //   city: "Paris",
-    //   country: "France",
-    //   tagline: "Ceci est ma data test",
-    //   price: 400,
-    //   portrait: "account.png",
-    // },
-    // {
-    //   name: "Autre data test",
-    //   id: 2,
-    //   city: "Londres",
-    //   country: "UK",
-    //   tagline: "Ceci est ma data test 2",
-    //   price: 500,
-    //   portrait: "account.png",
-    // },
+  // FETCH METHOD : ECMAScript 6 alias JavaScript 2015
+  // La méthode fetch() renvoie une promesse (un objet de type Promise) qui va se résoudre avec un objet Response 
 
-
-
-    fetch("data/photographers.json")
-    .then(res => res.json())
-    .then(data => console.table(data))
+const getPhotographers = async () => { 
+const { photographers } = await ( fetch('./data/photographers.json') 
+.then((response) => response.json()) ); 
+return { photographers }; 
+};
     
-  ];
 
 
-
-  // class App {
-  //   constructor() {
-  //     this.$moviesWrapper = document.querySelector(".movies-wrapper");
-  //     this.moviesApi = new MovieApi("/data/movie-data.json");
-  //   }
-
-  //   async main() {
-  //     const movies = await this.moviesApi.getMovies();
-
-  //     movies.forEach((movie) => {
-  //       const Template = new MovieCard(movie);
-  //       this.$moviesWrapper.appendChild(Template.createMovieCard());
-  //     });
-  //   }
-  // }
-
-  // const app = new App();
-  // app.main();
-
-
-  console.table(getPhotographers);
-
-  console.table(photographers);
-
-  console.time("tracker");
-  console.timeEnd("tracker");
 
   // et bien retourner le tableau photographers seulement une fois
-  return {
-    photographers: [...photographers, ...photographers, ...photographers],
-  };
-}
+  
 
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
