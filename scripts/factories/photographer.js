@@ -1,7 +1,9 @@
 function photographerFactory(data) {
-  const { name, portrait } = data;
+  const { name, portrait, city } = data;
 
   const picture = `assets/photographers/${portrait}`;
+
+
 
   function getUserCardDOM() {
     const article = document.createElement("article");
@@ -9,8 +11,13 @@ function photographerFactory(data) {
     img.setAttribute("src", picture);
     const h2 = document.createElement("h2");
     h2.textContent = name;
+    p.textContent = city ;
     article.appendChild(img);
     article.appendChild(h2);
+
+
+
+
     return article;
   }
   return { name, picture, getUserCardDOM };
