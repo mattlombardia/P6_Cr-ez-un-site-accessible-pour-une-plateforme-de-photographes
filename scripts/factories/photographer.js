@@ -18,7 +18,8 @@ function photographerFactory(data) {
     const h4 = document.createElement("h4");
     h4.textContent = tagline;
 
-    // Utilisation du templating pour 2 valeurs utilisées
+    // Utilisation du template strings pour 2 valeurs utilisées
+    // Utilisation du place holder `${nomvariable}
 
     const p = document.createElement("p");
     p.textContent = `${country}, ${city}`;
