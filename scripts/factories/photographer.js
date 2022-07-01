@@ -18,8 +18,10 @@ function photographerFactory(data) {
     const h4 = document.createElement("h4");
     h4.textContent = tagline;
 
+    // Utilisation du templating pour 2 valeurs utilisées
+
     const p = document.createElement("p");
-    p.textContent = country;
+    p.textContent = `${country}, ${city}`;
 
     article.appendChild(img);
     article.appendChild(h2);
