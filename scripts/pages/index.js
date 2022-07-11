@@ -1,18 +1,15 @@
-  // Données récupérées dans le json remplacées
-  // FETCH METHOD : ECMAScript 6 alias JavaScript 2015
-  // La méthode fetch() renvoie une promesse (un objet de type Promise) qui va se résoudre avec un objet Response 
+// Données récupérées dans le json remplacées
+// FETCH METHOD : ECMAScript 6 alias JavaScript 2015
+// La méthode fetch() renvoie une promesse (un objet de type Promise) qui va se résoudre avec un objet Response
 
-const getPhotographers = async () => { 
-const { photographers } = await ( fetch('./data/photographers.json') 
-.then((response) => response.json()) ); 
-return { photographers }; 
+const getPhotographers = async () => {
+  const { photographers } = await fetch("./data/photographers.json").then(
+    (response) => response.json()
+  );
+  return { photographers };
 };
-    
 
-
-
-  // Retourner le tableau photographers seulement une fois
-  
+// Retourner le tableau photographers seulement une fois
 
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
