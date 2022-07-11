@@ -2,12 +2,14 @@
 
 console.table();
 
-  //  "URL Search Params" Method
+//  "URL Search Params" Method
 
 async function getPhotographer() {
-  const id = window.location.search.split('id=')[1];
+  const id = window.location.search.split("id=")[1];
 
-  const photographerData = await (
-    fetch('./data/photographers.json')
-      .then((response) => response.json())
+  console.table(id);
+
+  const photographerData = await fetch("./data/photographers.json").then(
+    (response) => response.json()
   );
+}
