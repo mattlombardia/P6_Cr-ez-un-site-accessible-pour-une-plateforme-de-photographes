@@ -1,6 +1,16 @@
-# Base de code du projet P6 - Parcours Front-end
+# `Developer Application JavaScript React`
 
-## Démarrer le projet
 
-Rien à installer ici, il suffit d'ouvrir le fichier `index.html`.
+# P6 Créez un site accessible pour une plateforme de photographes
+
+## OpenClassRooms P6
+
+## Authors
+
+- [@matthieu-lombardia](https://www.github.com/matthieu-lombardia)
+
+
+## Documentation OpenClassRooms
+
+[Documentation](https://https://course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/P6+Front-End+-+Etapes+cles.pdf)
 
