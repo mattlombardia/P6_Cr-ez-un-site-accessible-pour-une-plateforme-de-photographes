@@ -13,3 +13,4 @@ async function getPhotographer() {
     (response) => response.json()
   );
 }
+
