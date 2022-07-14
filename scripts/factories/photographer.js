@@ -96,3 +96,4 @@ static getPhotographerById(id) {
   }
 
   */
+
