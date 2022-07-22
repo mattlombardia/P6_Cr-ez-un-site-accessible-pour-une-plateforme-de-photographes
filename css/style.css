@@ -28,6 +28,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 70px;
+    column-gap: 200px;
     margin-top: 100px;
 }
 
@@ -50,6 +51,14 @@ h1 {
     object-fit: cover;
     border-radius: 50%;
 
+}
+
+.link {
+    text-decoration: none;
+}
+
+.location {
+    color: #901C1C;
 }
 
 /* COMMENTS */

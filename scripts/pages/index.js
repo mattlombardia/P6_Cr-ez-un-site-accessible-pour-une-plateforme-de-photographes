@@ -31,6 +31,6 @@ async function init() {
 }
 console.table(init);
 
-init();
+// Fonction appelée quand page chargée
 
-alert("Le fichier");
+init();

@@ -1,15 +1,9 @@
 function photographerFactory(data) {
-  const {
-    id,
-    name,
-    portrait,
-    city,
-    country,
-    tagline,
-    price
-  } = data;
+  const { id, name, portrait, city, country, tagline, price } = data;
 
   const picture = `assets/photographers/${portrait}`;
+
+  // Création HTML Layout avec data photographers
 
   function getUserCardDOM() {
     const article = document.createElement("article");
@@ -32,8 +26,6 @@ function photographerFactory(data) {
     const p = document.createElement("p");
     p.textContent = `${price}€/jour`;
 
-
-
     const ahref = document.createElement("a");
     ahref.setAttribute("class", "link");
     ahref.setAttribute("aria-label", `${name}`);
@@ -55,12 +47,7 @@ function photographerFactory(data) {
     article.appendChild(h4);
     article.appendChild(p);
 
-
-
     return ahref;
-
-
-
 
     return article;
   }
@@ -72,18 +59,16 @@ function photographerFactory(data) {
     country,
     tagline,
     price,
-    getUserCardDOM
+    getUserCardDOM,
   };
 }
 
 console.table(photographerFactory);
 
 // Récupérer le lien du photographe
-// Create HTML Layout with photograph data 
-
+// Create HTML Layout with photograph data
 
 // méthode URLSEARCH PARAMS
-
 
 // Récupérer médias du Photographe
 
@@ -96,4 +81,3 @@ static getPhotographerById(id) {
   }
 
   */
-
