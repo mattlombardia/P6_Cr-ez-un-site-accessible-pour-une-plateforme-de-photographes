@@ -2,11 +2,14 @@
 // FETCH METHOD : ECMAScript 6 alias JavaScript 2015
 // La méthode fetch() renvoie une promesse (un objet de type Promise) qui va se résoudre avec un objet Response
 
+// pas variable, c'est une fonction fléchée () =>
 const getPhotographers = async () => {
   const { photographers } = await fetch("./data/photographers.json").then(
     (response) => response.json()
   );
-  return { photographers };
+  return {
+    photographers,
+  };
 };
 
 // Retourner le tableau photographers seulement une fois
@@ -29,3 +32,5 @@ async function init() {
 console.table(init);
 
 init();
+
+alert("Le fichier");
