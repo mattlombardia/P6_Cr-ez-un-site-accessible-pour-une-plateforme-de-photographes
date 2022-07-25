@@ -3,7 +3,7 @@ function photographerFactory(data) {
 
   const picture = `assets/photographers/${portrait}`;
 
-  // Création HTML Layout avec data photographers
+  // PAGE ACCUEIL : Création HTML Layout avec data photographers
 
   function getUserCardDOM() {
     const article = document.createElement("article");
@@ -30,22 +30,22 @@ function photographerFactory(data) {
     ahref.setAttribute("class", "link");
     ahref.setAttribute("aria-label", `${name}`);
     ahref.setAttribute("href", `photographer.html?id=${id}`);
+
     // const article = document.createElement("article");
     // const img = document.createElement("img");
-    article.setAttribute("class", "card-photographer");
+
+    // article.setAttribute("class", "card-photographer");
 
     ahref.appendChild(article);
-    // article.appendChild(img);
-    // article.appendChild(h2);
-    // article.appendChild(cityCountry);
-    // article.appendChild(tagline);
-    // article.appendChild(price);
-
     article.appendChild(img);
     article.appendChild(h2);
     article.appendChild(h3);
     article.appendChild(h4);
     article.appendChild(p);
+
+    // article.appendChild(cityCountry);
+    // article.appendChild(tagline);
+    // article.appendChild(price);
 
     return ahref;
 
@@ -72,12 +72,8 @@ console.table(photographerFactory);
 
 // Récupérer médias du Photographe
 
-/*
-
-static getPhotographerById(id) {
-    return this.getPhotographerList().then((photographers) =>
-      photographers.find((photographer) => photographer.id == id)
-    );
-  }
-
-  */
+// static getPhotographerById(id) {
+//     return this.getPhotographerList().then((photographers) =>
+//       photographers.find((photographer) => photographer.id == id)
+//     );
+//   }
