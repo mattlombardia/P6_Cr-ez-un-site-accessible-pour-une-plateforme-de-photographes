@@ -74,3 +74,64 @@ form input {
     border: none;
     border-radius: 5px;
 }
+
+
+
+body {
+    margin: 50px 100px;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.photographer_header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFAFA;
+    border-radius: 5px;
+    padding: 50px;
+    align-items: center;
+}
+
+.photographer_identity {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.photographer_name {
+    color: #D3573C;
+    margin: 0;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.photographer_location {
+    font-weight: 400;
+    margin: 0;
+    font-size: 26px;
+    color: #901C1C;
+}
+
+.photographer_slogan {
+    color: #525252;
+    font-weight: 400;
+    margin: 0;
+    font-size: 16px;
+}
+
+.photographer_modal {
+    background-color: #911C1C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    height: fit-content;
+    padding: 20px 10px;
+}
+
+.photographer_picture {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+}
