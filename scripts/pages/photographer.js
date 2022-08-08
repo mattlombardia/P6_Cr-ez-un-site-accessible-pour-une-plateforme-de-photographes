@@ -64,15 +64,15 @@ identityContainer.classList.add("photographer_identity");
 
 const photographerName = document.createElement("h2");
 photographerName.classList.add("photographer_name");
-photographerName.textContent = "John Doe";
+photographerName.textContent = "Name First Name";
 
 const photographerLocation = document.createElement("h3");
 photographerLocation.classList.add("photographer_location");
-photographerLocation.textContent = "Paris, FR";
+photographerLocation.textContent = "City, Country";
 
 const photographerSlogan = document.createElement("h4");
 photographerSlogan.classList.add("photographer_slogan");
-photographerSlogan.textContent = "Voir le beau dans le quotidien";
+photographerSlogan.textContent = "Lorem ipsum dolor sit amet";
 
 const photographerContactModal = document.createElement("button");
 photographerContactModal.classList.add("photographer_modal");
