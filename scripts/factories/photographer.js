@@ -48,8 +48,64 @@ function photographerFactory(data) {
     // article.appendChild(price);
 
     return ahref;
+  }
 
-    return article;
+  function getProfilePage() {
+    const photographHeader = document.createElement("div");
+    photographHeader.setAttribute("class", "photograph-header");
+
+    const mainInfos = document.createElement("div");
+    mainInfos.setAttribute("class", "photograph-infos");
+    mainInfos.setAttribute("tabindex", "0");
+
+    const nomPrenom = document.createElement("h1");
+    nomPrenom.setAttribute("class", "names");
+    nomPrenom.textContent = name;
+
+    const location = document.createElement("div");
+    location.setAttribute("class", "location");
+    const villePays = document.createElement("span");
+    villePays.textContent = city.concat(", ", country);
+    const bio = document.createElement("p");
+    bio.textContent = tagline;
+
+    const contactButton = document.createElement("button");
+    contactButton.setAttribute("id", "contact_button");
+    contactButton.setAttribute("class", "contact_button");
+    contactButton.setAttribute("onclick", "displayModal()");
+    contactButton.textContent = "Contactez-moi";
+
+    const profileImg = document.createElement("img");
+    profileImg.setAttribute("src", `assets/photographers/${portrait}`);
+    profileImg.setAttribute("class", "photographImg");
+    profileImg.setAttribute("alt", name);
+    profileImg.setAttribute("tabindex", "0");
+
+    const priceLikes = document.createElement("div");
+    priceLikes.setAttribute("class", "price");
+    const likesSpan = document.createElement("span");
+    likesSpan.setAttribute("class", "compteurLikeTotal");
+
+    const heart = document.createElement("span");
+    heart.setAttribute("aria-label", "likes");
+    heart.setAttribute("class", "fas fa-heart");
+    const priceDay = document.createElement("span");
+    priceDay.textContent = `${price}€ /jour`;
+
+    photographHeader.appendChild(mainInfos);
+    mainInfos.appendChild(nomPrenom);
+    mainInfos.appendChild(location);
+    location.appendChild(villePays);
+    location.appendChild(bio);
+    photographHeader.appendChild(contactButton);
+    photographHeader.appendChild(profileImg);
+
+    photographHeader.appendChild(priceLikes);
+    priceLikes.appendChild(likesSpan);
+    likesSpan.appendChild(heart);
+    priceLikes.appendChild(priceDay);
+
+    return photographHeader;
   }
   return {
     id,
@@ -60,10 +116,9 @@ function photographerFactory(data) {
     tagline,
     price,
     getUserCardDOM,
+    getProfilePage,
   };
 }
-
-console.table(photographerFactory);
 
 // Récupérer le lien du photographe
 // Create HTML Layout with photograph data
@@ -77,3 +132,44 @@ console.table(photographerFactory);
 //       photographers.find((photographer) => photographer.id == id)
 //     );
 //   }
+// Création du DOM après avoir structuré et stylisé la page en HTML/CSS
+
+// const headerPhotograph = document.querySelector(".photographer_header");
+// headerPhotograph.innerHTML = "";
+
+// console.group(headerPhotograph);
+
+// console.groupCollapsed(headerPhotograph);
+
+// console.profile(headerPhotograph);
+
+// const identityContainer = document.createElement("div");
+// identityContainer.classList.add("photographer_identity");
+
+// const photographerName = document.createElement("h2");
+// photographerName.classList.add("photographer_name");
+// photographerName.textContent = "Name First Name";
+
+// const photographerLocation = document.createElement("h3");
+// photographerLocation.classList.add("photographer_location");
+// photographerLocation.textContent = "City, Country";
+
+// const photographerSlogan = document.createElement("h4");
+// photographerSlogan.classList.add("photographer_slogan");
+// photographerSlogan.textContent = "Lorem ipsum dolor sit amet";
+
+// const photographerContactModal = document.createElement("button");
+// photographerContactModal.classList.add("photographer_modal");
+// photographerContactModal.textContent = "Contactez-moi";
+
+// const photographerPicture = document.createElement("img");
+// photographerPicture.classList.add("photographer_picture");
+// photographerPicture.setAttribute("src", "./assets/photographers/MimiKeel.jpg");
+// photographerPicture.setAttribute("alt", "Photographer picture");
+
+// headerPhotograph.appendChild(identityContainer);
+// identityContainer.appendChild(photographerName);
+// identityContainer.appendChild(photographerLocation);
+// identityContainer.appendChild(photographerSlogan);
+// headerPhotograph.appendChild(photographerContactModal);
+// headerPhotograph.appendChild(photographerPicture);
