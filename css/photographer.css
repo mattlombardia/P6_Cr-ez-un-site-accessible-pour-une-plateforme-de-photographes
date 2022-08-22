@@ -130,6 +130,13 @@ form input {
     padding: 20px 10px;
 }
 
+.photographImg {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 .photographer_picture {
     width: 96px;
     height: 96px;
