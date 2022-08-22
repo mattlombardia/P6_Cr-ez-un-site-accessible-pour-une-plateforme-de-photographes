@@ -51,61 +51,45 @@ function photographerFactory(data) {
   }
 
   function getProfilePage() {
-    const photographHeader = document.createElement("div");
-    photographHeader.setAttribute("class", "photograph-header");
+    const mainInfos = document.createElement("main");
+    mainInfos.setAttribute("class", "photographer_header");
 
-    const mainInfos = document.createElement("div");
-    mainInfos.setAttribute("class", "photograph-infos");
-    mainInfos.setAttribute("tabindex", "0");
+    const div = document.createElement("div");
+    div.setAttribute("class", "photographer_identity");
 
-    const nomPrenom = document.createElement("h1");
-    nomPrenom.setAttribute("class", "names");
+    const nomPrenom = document.createElement("h2");
+    nomPrenom.setAttribute("class", "photographer_name");
     nomPrenom.textContent = name;
 
-    const location = document.createElement("div");
-    location.setAttribute("class", "location");
-    const villePays = document.createElement("span");
-    villePays.textContent = city.concat(", ", country);
-    const bio = document.createElement("p");
-    bio.textContent = tagline;
+    const location = document.createElement("h3");
+    location.setAttribute("class", "photographer_location");
+    location.textContent = `${city}, ${country}`;
+
+    const slogan = document.createElement("h4");
+    slogan.setAttribute("class", "photographer_slogan");
+    slogan.textContent = tagline;
 
     const contactButton = document.createElement("button");
-    contactButton.setAttribute("id", "contact_button");
-    contactButton.setAttribute("class", "contact_button");
-    contactButton.setAttribute("onclick", "displayModal()");
+    contactButton.setAttribute("class", "photographer_modal");
     contactButton.textContent = "Contactez-moi";
 
-    const profileImg = document.createElement("img");
-    profileImg.setAttribute("src", `assets/photographers/${portrait}`);
-    profileImg.setAttribute("class", "photographImg");
-    profileImg.setAttribute("alt", name);
-    profileImg.setAttribute("tabindex", "0");
+    const photographer_picture = document.createElement("img");
+    photographer_picture.setAttribute(
+      "src",
+      `assets/photographers/${portrait}`
+    );
+    photographer_picture.setAttribute("class", "photographer_picture");
+    photographer_picture.setAttribute("alt", name);
 
-    const priceLikes = document.createElement("div");
-    priceLikes.setAttribute("class", "price");
-    const likesSpan = document.createElement("span");
-    likesSpan.setAttribute("class", "compteurLikeTotal");
+    mainInfos.appendChild(div);
+    div.appendChild(nomPrenom);
+    div.appendChild(location);
+    div.appendChild(slogan);
 
-    const heart = document.createElement("span");
-    heart.setAttribute("aria-label", "likes");
-    heart.setAttribute("class", "fas fa-heart");
-    const priceDay = document.createElement("span");
-    priceDay.textContent = `${price}€ /jour`;
+    mainInfos.appendChild(contactButton);
+    mainInfos.appendChild(photographer_picture);
 
-    photographHeader.appendChild(mainInfos);
-    mainInfos.appendChild(nomPrenom);
-    mainInfos.appendChild(location);
-    location.appendChild(villePays);
-    location.appendChild(bio);
-    photographHeader.appendChild(contactButton);
-    photographHeader.appendChild(profileImg);
-
-    photographHeader.appendChild(priceLikes);
-    priceLikes.appendChild(likesSpan);
-    likesSpan.appendChild(heart);
-    priceLikes.appendChild(priceDay);
-
-    return photographHeader;
+    return mainInfos;
   }
   return {
     id,
