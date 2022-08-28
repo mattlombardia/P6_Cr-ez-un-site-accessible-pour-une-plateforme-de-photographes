@@ -104,56 +104,82 @@ function photographerFactory(data) {
   };
 }
 
-// Récupérer le lien du photographe
-// Create HTML Layout with photograph data
+// HTML layout for media
+function getMediaPage() {
+  const jpg = `assets/images/${image}`;
+  const mp4 = `assets/images/${video}`;
 
-// méthode URLSEARCH PARAMS
+  const album = document.createElement("article");
+  album.setAttribute("class", "album");
 
-// Récupérer médias du Photographe
+  const caption = document.createElement("div");
+  caption.setAttribute("class", "caption");
+  const albumTitle = document.createElement("h2");
+  albumTitle.setAttribute("class", "mediaTitle");
+  if (title.length > 20) {
+    albumTitle.textContent = `${title.substring(0, 24)}...`;
+  } else {
+    albumTitle.textContent = title;
+  }
 
-// static getPhotographerById(id) {
-//     return this.getPhotographerList().then((photographers) =>
-//       photographers.find((photographer) => photographer.id == id)
-//     );
-//   }
-// Création du DOM après avoir structuré et stylisé la page en HTML/CSS
+  const like = document.createElement("p");
+  like.setAttribute("class", "like");
 
-// const headerPhotograph = document.querySelector(".photographer_header");
-// headerPhotograph.innerHTML = "";
+  const compteur = document.createElement("span");
+  compteur.setAttribute("class", "compteur");
+  compteur.textContent = `${likes} `;
+  const heart = document.createElement("span");
+  heart.setAttribute("aria-label", "likes");
+  heart.setAttribute("class", "fas fa-heart incrementLike");
+  heart.setAttribute("tabindex", "0");
 
-// console.group(headerPhotograph);
+  // If JPG -> <img>
+  if (jpg.split(".").pop() === "jpg") {
+    const img = document.createElement("img");
+    img.setAttribute("class", "lightboxMedia");
+    img.setAttribute("src", jpg);
+    img.setAttribute("alt", title);
+    img.setAttribute("tabindex", "0");
 
-// console.groupCollapsed(headerPhotograph);
+    album.appendChild(img);
+    album.appendChild(caption);
+    caption.appendChild(albumTitle);
+    caption.appendChild(like);
+    like.appendChild(compteur);
+    like.appendChild(heart);
+  }
 
-// console.profile(headerPhotograph);
+  // If MP4 -> <video>
+  if (mp4.split(".").pop() === "mp4") {
+    const videoPlayer = document.createElement("video");
+    videoPlayer.setAttribute("controls", "");
+    videoPlayer.setAttribute("class", "lightboxMedia");
+    const source = document.createElement("source");
+    source.setAttribute("src", mp4);
+    source.setAttribute("type", "video/mp4");
+    source.setAttribute("class", "lightboxImg");
+    source.setAttribute("tabindex", "0");
 
-// const identityContainer = document.createElement("div");
-// identityContainer.classList.add("photographer_identity");
+    album.appendChild(videoPlayer);
+    videoPlayer.appendChild(source);
+    album.appendChild(caption);
+    caption.appendChild(albumTitle);
+    caption.appendChild(like);
+    like.appendChild(compteur);
+    like.appendChild(heart);
+  }
 
-// const photographerName = document.createElement("h2");
-// photographerName.classList.add("photographer_name");
-// photographerName.textContent = "Name First Name";
+  return album;
+}
 
-// const photographerLocation = document.createElement("h3");
-// photographerLocation.classList.add("photographer_location");
-// photographerLocation.textContent = "City, Country";
+// Get likes of every media and add it to the sidebar
+function getTotalLikes() {
+  let totalLikes = 0;
 
-// const photographerSlogan = document.createElement("h4");
-// photographerSlogan.classList.add("photographer_slogan");
-// photographerSlogan.textContent = "Lorem ipsum dolor sit amet";
-
-// const photographerContactModal = document.createElement("button");
-// photographerContactModal.classList.add("photographer_modal");
-// photographerContactModal.textContent = "Contactez-moi";
-
-// const photographerPicture = document.createElement("img");
-// photographerPicture.classList.add("photographer_picture");
-// photographerPicture.setAttribute("src", "./assets/photographers/MimiKeel.jpg");
-// photographerPicture.setAttribute("alt", "Photographer picture");
-
-// headerPhotograph.appendChild(identityContainer);
-// identityContainer.appendChild(photographerName);
-// identityContainer.appendChild(photographerLocation);
-// identityContainer.appendChild(photographerSlogan);
-// headerPhotograph.appendChild(photographerContactModal);
-// headerPhotograph.appendChild(photographerPicture);
+  data.forEach((media) => {
+    totalLikes += media.likes;
+  });
+  // eslint-disable-next-line no-useless-concat
+  document.querySelector(".compteurLikeTotal").innerHTML =
+    `${totalLikes} ` + "<span class='fas fa-heart'></span>";
+}
