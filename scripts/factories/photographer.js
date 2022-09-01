@@ -1,5 +1,5 @@
 function photographerFactory(data) {
-  const { id, name, portrait, city, country, tagline, price } = data;
+  const { id, name, portrait, city, country, tagline, price, likes } = data;
 
   const picture = `assets/photographers/${portrait}`;
 
@@ -91,6 +91,75 @@ function photographerFactory(data) {
 
     return mainInfos;
   }
+
+  // HTML layout for media
+  function getMediaPage() {
+    const jpg = `assets/images/${name}/${image}`;
+    const mp4 = `assets/images/${name}/${video}`;
+
+    const album = document.createElement("article");
+    album.setAttribute("class", "album");
+
+    const caption = document.createElement("div");
+    caption.setAttribute("class", "caption");
+    const albumTitle = document.createElement("h2");
+    albumTitle.setAttribute("class", "mediaTitle");
+    if (title.length > 20) {
+      albumTitle.textContent = `${title.substring(0, 24)}...`;
+    } else {
+      albumTitle.textContent = title;
+    }
+
+    const like = document.createElement("p");
+    like.setAttribute("class", "like");
+
+    const compteur = document.createElement("span");
+    compteur.setAttribute("class", "compteur");
+    compteur.textContent = `${likes} `;
+    const heart = document.createElement("span");
+    heart.setAttribute("aria-label", "likes");
+    heart.setAttribute("class", "fas fa-heart incrementLike");
+    heart.setAttribute("tabindex", "0");
+
+    // If JPG -> <img>
+    if (jpg.split(".").pop() === "jpg") {
+      const img = document.createElement("img");
+      img.setAttribute("class", "lightboxMedia");
+      img.setAttribute("src", jpg);
+      img.setAttribute("alt", title);
+      img.setAttribute("tabindex", "0");
+
+      album.appendChild(img);
+      album.appendChild(caption);
+      caption.appendChild(albumTitle);
+      caption.appendChild(like);
+      like.appendChild(compteur);
+      like.appendChild(heart);
+    }
+
+    // If MP4 -> <video>
+    if (mp4.split(".").pop() === "mp4") {
+      const videoPlayer = document.createElement("video");
+      videoPlayer.setAttribute("controls", "");
+      videoPlayer.setAttribute("class", "lightboxMedia");
+      const source = document.createElement("source");
+      source.setAttribute("src", mp4);
+      source.setAttribute("type", "video/mp4");
+      source.setAttribute("class", "lightboxImg");
+      source.setAttribute("tabindex", "0");
+
+      album.appendChild(videoPlayer);
+      videoPlayer.appendChild(source);
+      album.appendChild(caption);
+      caption.appendChild(albumTitle);
+      caption.appendChild(like);
+      like.appendChild(compteur);
+      like.appendChild(heart);
+    }
+
+    return album;
+  }
+
   return {
     id,
     name,
@@ -101,75 +170,8 @@ function photographerFactory(data) {
     price,
     getUserCardDOM,
     getProfilePage,
+    getMediaPage,
   };
-}
-
-// HTML layout for media
-function getMediaPage() {
-  const jpg = `assets/images/${image}`;
-  const mp4 = `assets/images/${video}`;
-
-  const album = document.createElement("article");
-  album.setAttribute("class", "album");
-
-  const caption = document.createElement("div");
-  caption.setAttribute("class", "caption");
-  const albumTitle = document.createElement("h2");
-  albumTitle.setAttribute("class", "mediaTitle");
-  if (title.length > 20) {
-    albumTitle.textContent = `${title.substring(0, 24)}...`;
-  } else {
-    albumTitle.textContent = title;
-  }
-
-  const like = document.createElement("p");
-  like.setAttribute("class", "like");
-
-  const compteur = document.createElement("span");
-  compteur.setAttribute("class", "compteur");
-  compteur.textContent = `${likes} `;
-  const heart = document.createElement("span");
-  heart.setAttribute("aria-label", "likes");
-  heart.setAttribute("class", "fas fa-heart incrementLike");
-  heart.setAttribute("tabindex", "0");
-
-  // If JPG -> <img>
-  if (jpg.split(".").pop() === "jpg") {
-    const img = document.createElement("img");
-    img.setAttribute("class", "lightboxMedia");
-    img.setAttribute("src", jpg);
-    img.setAttribute("alt", title);
-    img.setAttribute("tabindex", "0");
-
-    album.appendChild(img);
-    album.appendChild(caption);
-    caption.appendChild(albumTitle);
-    caption.appendChild(like);
-    like.appendChild(compteur);
-    like.appendChild(heart);
-  }
-
-  // If MP4 -> <video>
-  if (mp4.split(".").pop() === "mp4") {
-    const videoPlayer = document.createElement("video");
-    videoPlayer.setAttribute("controls", "");
-    videoPlayer.setAttribute("class", "lightboxMedia");
-    const source = document.createElement("source");
-    source.setAttribute("src", mp4);
-    source.setAttribute("type", "video/mp4");
-    source.setAttribute("class", "lightboxImg");
-    source.setAttribute("tabindex", "0");
-
-    album.appendChild(videoPlayer);
-    videoPlayer.appendChild(source);
-    album.appendChild(caption);
-    caption.appendChild(albumTitle);
-    caption.appendChild(like);
-    like.appendChild(compteur);
-    like.appendChild(heart);
-  }
-
-  return album;
 }
 
 // Get likes of every media and add it to the sidebar
