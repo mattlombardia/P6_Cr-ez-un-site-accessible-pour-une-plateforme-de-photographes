@@ -3,7 +3,7 @@ function photographerFactory(data) {
 
   const picture = `assets/photographers/${portrait}`;
 
-  // PAGE ACCUEIL : Création HTML Layout avec data photographers
+  // PAGE ACCUEIL NOS PHOTOGRAPHES: Création HTML Layout avec data photographers
 
   function getUserCardDOM() {
     const article = document.createElement("article");
@@ -31,11 +31,6 @@ function photographerFactory(data) {
     ahref.setAttribute("aria-label", `${name}`);
     ahref.setAttribute("href", `photographer.html?id=${id}`);
 
-    // const article = document.createElement("article");
-    // const img = document.createElement("img");
-
-    // article.setAttribute("class", "card-photographer");
-
     ahref.appendChild(article);
     article.appendChild(img);
     article.appendChild(h2);
@@ -43,12 +38,10 @@ function photographerFactory(data) {
     article.appendChild(h4);
     article.appendChild(p);
 
-    // article.appendChild(cityCountry);
-    // article.appendChild(tagline);
-    // article.appendChild(price);
-
     return ahref;
   }
+
+  // PAGE PHOTOGRAPHES RECUPERATION ID : Création HTML Layout avec data photographers
 
   function getProfilePage() {
     const mainInfos = document.createElement("main");
@@ -81,6 +74,8 @@ function photographerFactory(data) {
     photographer_picture.setAttribute("class", "photographer_picture");
     photographer_picture.setAttribute("alt", name);
 
+    // METHODE appendChild pour ajouter un nœud à la fin de la liste des enfants d'un nœud parent spécifié.
+
     mainInfos.appendChild(div);
     div.appendChild(nomPrenom);
     div.appendChild(location);
@@ -92,7 +87,7 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
-  // HTML layout for media
+  //  PAGE PHOTOGRAPHES HTML layout for media
   function getMediaPage() {
     const jpg = `assets/images/${name}/${image}`;
     const mp4 = `assets/images/${name}/${video}`;
@@ -121,7 +116,7 @@ function photographerFactory(data) {
     heart.setAttribute("class", "fas fa-heart incrementLike");
     heart.setAttribute("tabindex", "0");
 
-    // If JPG -> <img>
+    //  PAGE PHOTOGRAPHES If JPG -> <img>
     if (jpg.split(".").pop() === "jpg") {
       const img = document.createElement("img");
       img.setAttribute("class", "lightboxMedia");
@@ -137,7 +132,7 @@ function photographerFactory(data) {
       like.appendChild(heart);
     }
 
-    // If MP4 -> <video>
+    //  PAGE PHOTOGRAPHES If MP4 -> <video>
     if (mp4.split(".").pop() === "mp4") {
       const videoPlayer = document.createElement("video");
       videoPlayer.setAttribute("controls", "");
