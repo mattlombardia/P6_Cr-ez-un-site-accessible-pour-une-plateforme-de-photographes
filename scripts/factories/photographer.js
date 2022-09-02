@@ -75,7 +75,6 @@ function photographerFactory(data) {
     photographer_picture.setAttribute("alt", name);
 
     // METHODE appendChild pour ajouter un nœud à la fin de la liste des enfants d'un nœud parent spécifié.
-
     mainInfos.appendChild(div);
     div.appendChild(nomPrenom);
     div.appendChild(location);
