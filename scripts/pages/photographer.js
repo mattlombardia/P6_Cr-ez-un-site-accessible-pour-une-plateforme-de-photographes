@@ -9,13 +9,13 @@ async function getPhotographer() {
   const url = new URL(str);
   const id = url.searchParams.get("id");
 
-  console.table(id);
+  console.log(id);
 
   const photographerData = await fetch("./data/photographers.json").then(
     (response) => response.json()
   );
 
-  console.table(photographerData);
+  console.log(photographerData);
 
   photographerData.photographers = photographerData.photographers.filter(
     (photographer) => photographer.id == id
