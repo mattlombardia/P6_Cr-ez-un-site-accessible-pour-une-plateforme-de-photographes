@@ -1,3 +1,5 @@
+// Fonction qui va récupérer les datas dans photographers.json
+
 function photographerFactory(data) {
   const {
     id,
@@ -13,6 +15,8 @@ function photographerFactory(data) {
     title,
   } = data;
 
+  // Utilisation du template strings pour 2 valeurs utilisées
+  // Utilisation du place holder `${nomvariable}
   const picture = `assets/photographers/${portrait}`;
 
   // index.html : Création HTML Layout
@@ -53,7 +57,7 @@ function photographerFactory(data) {
     return ahref;
   }
 
-  // photographer-page.html : Création HTML Layout
+  // photographer-page.html : Création banner HTML Layout
   function getProfilePage() {
     const mainInfos = document.createElement("main");
     mainInfos.setAttribute("class", "photographer_header");
@@ -97,7 +101,7 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
-  // photographer-page.html : layout for media
+  // photographer-page.html : layout affichage media
   function getMediaPage() {
     const jpg = `assets/images/${image}`;
 
@@ -129,7 +133,7 @@ function photographerFactory(data) {
     heart.setAttribute("class", "fas fa-heart incrementLike");
     heart.setAttribute("tabindex", "0");
 
-    //  PAGE PHOTOGRAPHES If JPG -> <img>
+    //  photographer-page.html : If JPG -> <img>
     if (jpg.split(".").pop() === "jpg") {
       const img = document.createElement("img");
       img.setAttribute("class", "lightboxMedia");
@@ -145,7 +149,7 @@ function photographerFactory(data) {
       like.appendChild(heart);
     }
 
-    //  PAGE PHOTOGRAPHES If MP4 -> <video>
+    //  photographer-page.html : If MP4 -> <video>
     if (mp4.split(".").pop() === "mp4") {
       const videoPlayer = document.createElement("video");
       videoPlayer.setAttribute("controls", "");
@@ -182,7 +186,7 @@ function photographerFactory(data) {
   };
 }
 
-// Get likes of every media and add it to the sidebar
+// photographer-page.html - likes obtenus de tous  médias et ajout à la barre latérale sidebar
 function getTotalLikes() {
   let totalLikes = 0;
 

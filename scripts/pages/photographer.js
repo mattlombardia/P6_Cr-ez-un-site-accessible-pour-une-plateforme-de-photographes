@@ -3,8 +3,6 @@
 //  "URL Search Params" Method
 
 async function getPhotographer() {
-  // const id = window.location.search.split("id=")[1];
-
   const str = window.location.href;
   const url = new URL(str);
   const id = url.searchParams.get("id");
