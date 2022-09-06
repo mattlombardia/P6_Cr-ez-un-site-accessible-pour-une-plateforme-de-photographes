@@ -37,7 +37,6 @@ async function init() {
 }
 
 // Fonction appelée quand page chargée
-
 function displayData(photographer) {
   const photographersSection = document.getElementById("photographeInfos");
   const profileModel = photographerFactory(photographer);
@@ -45,6 +44,7 @@ function displayData(photographer) {
   photographersSection.appendChild(profiles);
 }
 
+// Fonction qui fait appraitre les médias
 function displayMedias(medias) {
   const mediaslist = document.getElementById("mediaslist");
   medias.forEach((media) => {
