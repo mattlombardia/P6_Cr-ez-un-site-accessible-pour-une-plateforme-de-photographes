@@ -1,5 +1,17 @@
 function photographerFactory(data) {
-  const { id, name, portrait, city, country, tagline, price, likes } = data;
+  const {
+    id,
+    name,
+    portrait,
+    city,
+    country,
+    tagline,
+    price,
+    likes,
+    image,
+    video,
+    title,
+  } = data;
 
   const picture = `assets/photographers/${portrait}`;
 
@@ -88,8 +100,22 @@ function photographerFactory(data) {
 
   //  PAGE PHOTOGRAPHES HTML layout for media
   function getMediaPage() {
-    const jpg = `assets/images/${name}/${image}`;
-    const mp4 = `assets/images/${name}/${video}`;
+    // const media = document.createElement("div");
+    // media.setAttribute("id", "media");
+
+    // const menu = document.createElement("div");
+    // menu.setAttribute("id", "menu");
+
+    // const a = document.createElement("a");
+    // a.textContent = "Trier par";
+
+    // media.appendChild(menu);
+    // menu.appendChild(a);
+
+    // console.log(menu);
+
+    const jpg = `assets/images/${image}`;
+    const mp4 = `assets/images/${video}`;
 
     const album = document.createElement("article");
     album.setAttribute("class", "album");

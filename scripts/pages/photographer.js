@@ -33,6 +33,7 @@ async function init() {
   const photographer = await getPhotographer();
   console.log(photographer);
   displayData(photographer.photographers);
+  displayMedias(photographer.media);
 }
 
 // Fonction appelée quand page chargée
@@ -42,6 +43,15 @@ function displayData(photographer) {
   const profileModel = photographerFactory(photographer);
   const profiles = profileModel.getProfilePage();
   photographersSection.appendChild(profiles);
+}
+
+function displayMedias(medias) {
+  const mediaslist = document.getElementById("mediaslist");
+  medias.forEach((media) => {
+    const mediaModel = photographerFactory(media);
+    const displaymedia = mediaModel.getMediaPage();
+    mediaslist.appendChild(displaymedia);
+  });
 }
 
 init();
