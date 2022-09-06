@@ -15,7 +15,7 @@ function photographerFactory(data) {
 
   const picture = `assets/photographers/${portrait}`;
 
-  // PAGE ACCUEIL NOS PHOTOGRAPHES: Création HTML Layout avec data photographers
+  // index.html : Création HTML Layout
 
   function getUserCardDOM() {
     const article = document.createElement("article");
@@ -53,8 +53,7 @@ function photographerFactory(data) {
     return ahref;
   }
 
-  // PAGE PHOTOGRAPHES RECUPERATION ID : Création HTML Layout avec data photographers
-
+  // photographer-page.html : Création HTML Layout
   function getProfilePage() {
     const mainInfos = document.createElement("main");
     mainInfos.setAttribute("class", "photographer_header");
@@ -98,9 +97,10 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
-  //  PAGE PHOTOGRAPHES HTML layout for media
+  // photographer-page.html : layout for media
   function getMediaPage() {
     const jpg = `assets/images/${image}`;
+
     const mp4 = `assets/images/${video}`;
 
     const album = document.createElement("article");
@@ -108,6 +108,7 @@ function photographerFactory(data) {
 
     const caption = document.createElement("div");
     caption.setAttribute("class", "caption");
+
     const albumTitle = document.createElement("h2");
     albumTitle.setAttribute("class", "mediaTitle");
     if (title.length > 20) {
@@ -122,6 +123,7 @@ function photographerFactory(data) {
     const compteur = document.createElement("span");
     compteur.setAttribute("class", "compteur");
     compteur.textContent = `${likes} `;
+
     const heart = document.createElement("span");
     heart.setAttribute("aria-label", "likes");
     heart.setAttribute("class", "fas fa-heart incrementLike");
