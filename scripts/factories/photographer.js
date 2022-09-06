@@ -100,20 +100,6 @@ function photographerFactory(data) {
 
   //  PAGE PHOTOGRAPHES HTML layout for media
   function getMediaPage() {
-    // const media = document.createElement("div");
-    // media.setAttribute("id", "media");
-
-    // const menu = document.createElement("div");
-    // menu.setAttribute("id", "menu");
-
-    // const a = document.createElement("a");
-    // a.textContent = "Trier par";
-
-    // media.appendChild(menu);
-    // menu.appendChild(a);
-
-    // console.log(menu);
-
     const jpg = `assets/images/${image}`;
     const mp4 = `assets/images/${video}`;
 
