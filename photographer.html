@@ -1,60 +1,59 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fisheye - Photographes</title>
+  </head>
 
-<head>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <meta charset="utf-8">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-  <title>Fisheye - Photographes </title>
-</head>
+  <body id="body-photographer">
+    <header>
+      <img src="assets/images/logo.png" class="logo" />
+    </header>
 
-<body id="body-photographer">
-  <header>
-    <img src="assets/images/logo.png" class="logo" />
-  </header>
+    <section id="photographeInfos"></section>
 
-  <section id="photographeInfos"></section>
-
-  <!-- Création section mediaslist pour afficher les médias -->
-  <section id="mediaslist"></section>
-
-  <div id="media">
-    <div id="menu">
-      <li class="menu-deroulant">
-        <a href="#">Trier par</a>
-        <ul class="sous-menu">
-          <li><a href="#">Popularité</a></li>
-          <li><a href="#">Date</a></li>
-          <li><a href="#">Titre</a></li>
-        </ul>
-      </li>
+    <!-- Création menu déroulant -->
+    <div id="media">
+      <div id="menu">
+        <li class="menu-deroulant">
+          <a href="#">Trier par</a>
+          <ul class="sous-menu">
+            <li><a href="#">Popularité</a></li>
+            <li><a href="#">Date</a></li>
+            <li><a href="#">Titre</a></li>
+          </ul>
+        </li>
+      </div>
+      <div id="articles_media"></div>
     </div>
-    <div id="articles_media">
+
+    <!-- Création section mediaslist pour afficher les médias -->
+    <section id="mediaslist"></section>
+
+    <div id="contact_modal">
+      <div class="modal">
+        <header>
+          <h2>Contactez-moi</h2>
+
+          <img src="assets/icons/close.svg" onclick="closeModal()" />
+        </header>
+        <form>
+          <div>
+            <label>Prénom</label>
+            <input />
+          </div>
+          <button class="contact_button">Envoyer</button>
+        </form>
+      </div>
     </div>
-  </div>
-
-
-  <div id="contact_modal">
-    <div class="modal">
-      <header>
-        <h2>Contactez-moi</h2>
-
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
-      </header>
-      <form>
-        <div>
-          <label>Prénom</label>
-          <input />
-        </div>
-        <button class="contact_button">Envoyer</button>
-      </form>
-    </div>
-  </div>
-  <script src="scripts/pages/photographer.js"></script>
-  <script src="scripts/factories/photographer.js"></script>
-  <script src="scripts/utils/contactform.js"></script>
-
-</body>
-
+    <script src="scripts/pages/photographer.js"></script>
+    <script src="scripts/factories/photographer.js"></script>
+    <script src="scripts/utils/contactform.js"></script>
+  </body>
 </html>
