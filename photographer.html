@@ -16,31 +16,20 @@
       <img src="assets/images/logo.png" class="logo" />
     </header>
 
+    <!-- Banner infos Photographers -->
     <section id="photographeInfos"></section>
 
-    <!-- Création menu déroulant -->
-    <div id="media">
-      <div id="menu">
-        <li class="menu-deroulant">
-          <a href="#">Trier par</a>
-          <ul class="sous-menu">
-            <li><a href="#">Popularité</a></li>
-            <li><a href="#">Date</a></li>
-            <li><a href="#">Titre</a></li>
-          </ul>
-        </li>
-      </div>
-      <div id="articles_media"></div>
-    </div>
+    <!-- Menu déroulant -->
+    <section id="scrolling_menu"></section>
 
-    <!-- Création section mediaslist pour afficher les médias -->
+    <!-- Section Album affichage médias -->
     <section id="mediaslist"></section>
 
+    <!-- Modal contact -->
     <div id="contact_modal">
       <div class="modal">
         <header>
           <h2>Contactez-moi</h2>
-
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
         <form>
@@ -52,6 +41,8 @@
         </form>
       </div>
     </div>
+
+    <!-- Links to JS -->
     <script src="scripts/pages/photographer.js"></script>
     <script src="scripts/factories/photographer.js"></script>
     <script src="scripts/utils/contactform.js"></script>
