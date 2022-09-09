@@ -274,18 +274,13 @@ nav > ul > li:hover > a {
 /* MEDIA */
 
 .lightboxMedia {
-  width: 300px;
+  width: 350px;
   height: 300px;
   object-fit: cover;
+  border-radius: 1%;
 }
 
 #mediaslist {
-  /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: space-evenly; */
   display: flex;
   flex-wrap: wrap;
   gap: 23px 95px;
