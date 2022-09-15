@@ -103,29 +103,29 @@ function photographerFactory(data) {
 
   // photographer-page.html : banner TRI
 
-  function getTriImg() {
-    const article = document.getElementById("scrolling_menu");
-    const ul = document.createElement("ul");
-    ul.textContent = "Trier par";
+  // function getTriImg() {
+  //   const article = document.getElementById("scrolling_menu");
+  //   const ul = document.createElement("ul");
+  //   ul.textContent = "Trier par";
 
-    const li1 = document.createElement("li");
-    li1.textContent = "Date";
+  //   const li1 = document.createElement("li");
+  //   li1.textContent = "Date";
 
-    const li2 = document.createElement("li");
-    li2.textContent = "Popularité";
+  //   const li2 = document.createElement("li");
+  //   li2.textContent = "Popularité";
 
-    const li3 = document.createElement("li");
-    li3.textContent = "Titre";
+  //   const li3 = document.createElement("li");
+  //   li3.textContent = "Titre";
 
-    article.appendChild(ul);
-    ul.appendChild(li1);
-    ul.appendChild(li2);
-    ul.appendChild(li3);
+  //   article.appendChild(ul);
+  //   ul.appendChild(li1);
+  //   ul.appendChild(li2);
+  //   ul.appendChild(li3);
 
-    console.log(article);
+  //   console.log(article);
 
-    return article;
-  }
+  //   return article;
+  // }
 
   // photographer-page.html : layout affichage media
   function getMediaPage() {
@@ -209,7 +209,7 @@ function photographerFactory(data) {
     getUserCardDOM,
     getProfilePage,
     getMediaPage,
-    getTriImg,
+    // getTriImg,
   };
 }
 
