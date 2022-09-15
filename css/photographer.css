@@ -146,12 +146,14 @@ form input {
   border-radius: 50%;
 }
 
-/* MEDIA  */
+/* MENU DEROULANT  */
 #scrolling_menu {
   background-color: rgba(130, 255, 128, 0.5);
 }
 
-/* MENU DEROULANT  */
+ul {
+  list-style-type: none;
+}
 
 /* MEDIA */
 
