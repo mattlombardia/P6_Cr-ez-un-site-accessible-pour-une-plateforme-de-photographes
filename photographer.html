@@ -8,6 +8,11 @@
       href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      rel="stylesheet"
+    />
+
     <title>Fisheye - Photographes</title>
   </head>
 
@@ -20,18 +25,15 @@
     <section id="photographeInfos"></section>
 
     <!--Banner menu déroulant tri -->
-    <nav>
-      <ul>
-        <li class="menu-deroulant">
-          <a href="#">Trier par</a>
-          <ul class="sous-menu">
-            <li><a href="#">Date</a></li>
-            <li><a href="#">Popularité</a></li>
-            <li><a href="#">Titre</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+    <div id="bloc_tri">
+      <a id="tri" href="#">Trier par </a>
+      <div id="menu-deroulant">
+        <a class="men_der" href="#">Popularité</a>
+        <i class="fa-solid fa-angle-down"></i>
+        <a class="men_der" href="#">Date</a>
+        <a class="men_der" href="#">Titre</a>
+      </div>
+    </div>
 
     <!-- Section Album affichage médias -->
     <section id="mediaslist"></section>
@@ -40,7 +42,7 @@
     <div id="contact_modal">
       <div class="modal">
         <header>
-          <h2>Contactez-moi</h2>
+          <h2 id="button_contact">Contactez-moi</h2>
           <img src="assets/icons/close.svg" onclick="closeModal()" />
         </header>
         <form>
