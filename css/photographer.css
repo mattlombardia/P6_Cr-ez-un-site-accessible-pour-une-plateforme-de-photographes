@@ -180,11 +180,11 @@ form input {
   position: relative;
 }
 
-/* * {
+* {
   border-style: dotted;
   border-color: rgb(163, 194, 12);
   border-width: 1px;
-} */
+}
 
 /* Dropdown Button */
 .dropbtn {
