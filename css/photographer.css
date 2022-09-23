@@ -179,12 +179,12 @@ form input {
   text-align: center;
   position: relative;
 }
-
+/* 
 * {
   border-style: dotted;
   border-color: rgb(163, 194, 12);
   border-width: 1px;
-}
+} */
 
 /* Dropdown Button */
 .dropbtn {
@@ -193,13 +193,16 @@ form input {
   padding: 16px;
   font-size: 16px;
   border: none;
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
   display: inline-block;
+  min-width: 160px;
+  background-color: #901c1c;
+  border-radius: 0.5rem;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -210,6 +213,10 @@ form input {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  position: absolute;
+  top: 40px;
 }
 
 /* Links inside the dropdown */
@@ -220,9 +227,13 @@ form input {
   display: block;
 }
 
+.dropbtn {
+  font-weight: bold;
+}
+
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #d3573c;
+  background-color: #901c1c;
 }
 
 /* Show the dropdown menu on hover */
@@ -233,4 +244,9 @@ form input {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: #901c1c;
+}
+
+hr {
+  background-color: white;
+  margin: 10px;
 }
