@@ -164,7 +164,7 @@ form input {
   display: flex;
 }
 
-#menu-deroulant {
+/* #menu-deroulant {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -185,7 +185,7 @@ form input {
 
 #menu-deroulant:hover {
   background-color: #d3573c;
-}
+} */
 
 /* MEDIA */
 
