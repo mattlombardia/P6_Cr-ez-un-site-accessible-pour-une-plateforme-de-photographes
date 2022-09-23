@@ -164,31 +164,6 @@ form input {
   display: flex;
 }
 
-/* #menu-deroulant {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  background-color: #901c1c;
-  height: 90px;
-  width: 200px;
-  border-radius: 5%;
-}
-
-.men_der {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.men_der :hover {
-  color: #000000;
-}
-
-#menu-deroulant:hover {
-  background-color: #d3573c;
-} */
-
-/* MEDIA */
-
 .lightboxMedia {
   width: 350px;
   height: 300px;
