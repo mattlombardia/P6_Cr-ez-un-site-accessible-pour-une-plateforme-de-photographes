@@ -186,10 +186,28 @@ form input {
   text-align: center;
   position: relative;
 }
-/* 
-* {
+
+.caption {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  color: #901c1c;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.like {
+  color: #901c1c;
+  font-weight: normal;
+}
+
+/* * {
   border-style: dotted;
-  border-color: rgb(163, 194, 12);
+  border-color: rgb(194, 12, 18);
   border-width: 1px;
 } */
 
