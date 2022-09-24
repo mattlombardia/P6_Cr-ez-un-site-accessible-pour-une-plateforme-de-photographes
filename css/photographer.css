@@ -123,7 +123,7 @@ form input {
 }
 
 .photographer_modal {
-  background-color: #911c1c;
+  background-color: #901c1c;
   border: none;
   border-radius: 5px;
   color: white;
@@ -131,6 +131,13 @@ form input {
   font-family: sans-serif;
   height: fit-content;
   padding: 20px 10px;
+  font-size: 16px;
+  min-width: 150px;
+}
+
+.photographer_modal:hover {
+  background-color: #db8876;
+  color: rgb(0, 0, 0);
 }
 
 .photographImg {
