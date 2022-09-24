@@ -242,6 +242,7 @@ form input {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #901c1c;
+  border-radius: 0.5rem;
 }
 
 /* Show the dropdown menu on hover */
