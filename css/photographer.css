@@ -1,5 +1,6 @@
 /* MODAL  */
 
+/* Cacher le modal */
 #contact_modal {
   display: none;
 }
@@ -133,6 +134,10 @@ form input {
   padding: 20px 10px;
   font-size: 16px;
   min-width: 150px;
+}
+
+#click_button {
+  cursor: pointer;
 }
 
 .photographer_modal:hover {

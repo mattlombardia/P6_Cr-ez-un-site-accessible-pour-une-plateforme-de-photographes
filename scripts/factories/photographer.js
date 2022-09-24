@@ -80,6 +80,7 @@ function photographerFactory(data) {
     const contactButton = document.createElement("button");
     contactButton.setAttribute("class", "photographer_modal");
     contactButton.textContent = "Contactez-moi";
+    contactButton.setAttribute("id", "click_button");
 
     const photographer_picture = document.createElement("img");
     photographer_picture.setAttribute(
