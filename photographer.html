@@ -26,18 +26,16 @@
 
     <!--Banner menu déroulant tri -->
     <div id="bloc_tri">
-      <a id="tri">Trier par </a>
-
-      <div class="dropdown">
-        <button href="#" class="dropbtn">Popularité</button>
-        <div class="dropdown-content">
-          <hr />
-
-          <a href="#">Date</a>
-          <hr />
-          <a href="#">Titre</a>
-        </div>
-      </div>
+      <form action="/action_page.php">
+        <label for="tri">Trier par :</label>
+        <select name="tri" id="tri">
+          <option class="alltri" value="Popularité">Popularité</option>
+          <option class="alltri" value="Date">Date</option>
+          <option class="alltri" value="Titre">Titre</option>
+        </select>
+        <br /><br />
+        <!-- <input type="submit" value="Submit" /> -->
+      </form>
     </div>
 
     <!-- Section Album affichage médias -->

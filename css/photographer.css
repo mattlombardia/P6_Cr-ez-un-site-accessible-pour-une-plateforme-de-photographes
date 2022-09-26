@@ -58,11 +58,6 @@ form {
   align-items: flex-start;
 }
 
-form label {
-  color: #312e2e;
-  font-size: 36px;
-}
-
 form div {
   display: flex;
   flex-direction: column;
@@ -159,23 +154,6 @@ form input {
   border-radius: 50%;
 }
 
-/* MENU DEROULANT  */
-#bloc_tri {
-  display: flex;
-  align-items: center;
-  min-height: 100px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-#tri {
-  min-width: 150px;
-  text-decoration: none;
-  color: #000000;
-  display: flex;
-}
-
 .lightboxMedia {
   width: 350px;
   height: 300px;
@@ -210,75 +188,37 @@ h2 {
   font-weight: normal;
 }
 
-/* * {
+* {
   border-style: dotted;
   border-color: rgb(194, 12, 18);
   border-width: 1px;
-} */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #901c1c;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  border-radius: 0.5rem;
 }
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  min-width: 160px;
-  background-color: #901c1c;
-  border-radius: 0.5rem;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #901c1c;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-bottom-right-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-  position: absolute;
-  top: 40px;
-  box-shadow: 1px 5px 5px #c6c6c6;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: rgb(255, 255, 255);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropbtn {
+/* MENU SELECT  */
+#bloc_tri {
+  /* display: flex;
+  align-items: center;
+  min-height: 100px;
   font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 50px; */
 }
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: #901c1c;
-  border-radius: 0.5rem;
+#tri {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
+form label {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "DM Sans", sans-serif;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #901c1c;
-}
-
-hr {
-  background-color: white;
-  margin: 10px;
+.alltri {
+  cursor: pointer;
 }
