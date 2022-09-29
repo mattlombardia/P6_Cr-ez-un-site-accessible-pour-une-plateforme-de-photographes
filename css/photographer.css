@@ -190,11 +190,16 @@ h2 {
 
 * {
   border-style: dotted;
-  border-color: rgb(194, 12, 18);
+  border-color: rgb(139, 135, 135);
   border-width: 1px;
 }
 
 /* MENU SELECT  */
+
+#bloc_tri {
+  /* background-color: aqua; */
+}
+
 #bloc_form {
   display: flex;
   flex-direction: column;

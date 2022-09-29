@@ -1,5 +1,6 @@
 // Fonction qui va récupérer les datas dans photographers.json
 
+// Function et son (paramètre)
 function photographerFactory(data) {
   const {
     id,
@@ -21,6 +22,7 @@ function photographerFactory(data) {
 
   // index.html : Création HTML Layout
 
+  // Function et son (paramètre)
   function getUserCardDOM() {
     const article = document.createElement("article");
 
@@ -58,6 +60,8 @@ function photographerFactory(data) {
   }
 
   // photographer-page.html : Création banner HTML Layout
+
+  // Function et son // Function et son (paramètre)
   function getProfilePage() {
     const mainInfos = document.createElement("main");
     mainInfos.setAttribute("class", "photographer_header");
@@ -102,33 +106,9 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
-  // photographer-page.html : banner TRI
-
-  // function getTriImg() {
-  //   const article = document.getElementById("scrolling_menu");
-  //   const ul = document.createElement("ul");
-  //   ul.textContent = "Trier par";
-
-  //   const li1 = document.createElement("li");
-  //   li1.textContent = "Date";
-
-  //   const li2 = document.createElement("li");
-  //   li2.textContent = "Popularité";
-
-  //   const li3 = document.createElement("li");
-  //   li3.textContent = "Titre";
-
-  //   article.appendChild(ul);
-  //   ul.appendChild(li1);
-  //   ul.appendChild(li2);
-  //   ul.appendChild(li3);
-
-  //   console.log(article);
-
-  //   return article;
-  // }
-
   // photographer-page.html : layout affichage media
+
+  // Function et son (paramètre)
   function getMediaPage() {
     const jpg = `assets/images/${image}`;
 

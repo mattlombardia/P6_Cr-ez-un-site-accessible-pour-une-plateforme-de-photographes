@@ -2,6 +2,7 @@
 
 //  "URL Search Params" Method
 
+// Function et son (paramètre)
 async function getPhotographer() {
   const str = window.location.href;
   const url = new URL(str);
@@ -26,6 +27,7 @@ async function getPhotographer() {
   return photographerData;
 }
 
+// Function et son (paramètre)
 async function init() {
   // Récupère les datas des photographes
   const photographer = await getPhotographer();
@@ -35,6 +37,7 @@ async function init() {
 }
 
 // Fonction appelée quand page chargée
+// Function et son (paramètre)
 function displayData(photographer) {
   const photographersSection = document.getElementById("photographeInfos");
   const profileModel = photographerFactory(photographer);
@@ -43,6 +46,7 @@ function displayData(photographer) {
 }
 
 // Fonction qui fait appraitre les médias
+// Function et son (paramètre)
 function displayMedias(medias) {
   const mediaslist = document.getElementById("mediaslist");
   medias.forEach((media) => {
