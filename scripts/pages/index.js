@@ -14,7 +14,7 @@ const getPhotographers = async () => {
 
 // Retourner le tableau photographers seulement une fois
 
-// Function et son (paramètre)
+// Function et (UNE VARIABABLE qui est un paramètre)
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
 
@@ -25,7 +25,7 @@ async function displayData(photographers) {
   });
 }
 
-// Function et son (paramètre)
+// Function et (UNE VARIABABLE qui est un paramètre)
 async function init() {
   // Récupère les datas des photographes
   const { photographers } = await getPhotographers();

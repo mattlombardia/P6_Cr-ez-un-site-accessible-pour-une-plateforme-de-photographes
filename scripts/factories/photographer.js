@@ -1,6 +1,6 @@
 // Fonction qui va récupérer les datas dans photographers.json
 
-// Function et son (paramètre)
+// Function et (UNE VARIABABLE qui est un paramètre)
 function photographerFactory(data) {
   const {
     id,
@@ -22,7 +22,7 @@ function photographerFactory(data) {
 
   // index.html : Création HTML Layout
 
-  // Function et son (paramètre)
+  // Function et (UNE VARIABABLE qui est un paramètre)
   function getUserCardDOM() {
     const article = document.createElement("article");
 
@@ -61,7 +61,7 @@ function photographerFactory(data) {
 
   // photographer-page.html : Création banner HTML Layout
 
-  // Function et son // Function et son (paramètre)
+  // Function et (UNE VARIABABLE qui est un paramètre)
   function getProfilePage() {
     const mainInfos = document.createElement("main");
     mainInfos.setAttribute("class", "photographer_header");
@@ -108,7 +108,7 @@ function photographerFactory(data) {
 
   // photographer-page.html : layout affichage media
 
-  // Function et son (paramètre)
+  // Function et (UNE VARIABABLE qui est un paramètre)
   function getMediaPage() {
     const jpg = `assets/images/${image}`;
 
