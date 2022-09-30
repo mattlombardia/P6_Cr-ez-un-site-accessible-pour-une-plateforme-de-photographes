@@ -2,7 +2,11 @@
 
 /* Cacher le modal */
 #contact_modal {
-  display: none;
+  /* display: none; */
+}
+
+#button_contact {
+  color: #000000;
 }
 
 .photograph-header {
