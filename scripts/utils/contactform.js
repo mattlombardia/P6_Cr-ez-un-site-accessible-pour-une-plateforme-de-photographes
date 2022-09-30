@@ -5,6 +5,12 @@ function displayModal() {
 }
 console.table(displayModal);
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeModal();
+  }
+});
+
 // Function et (UNE VARIABABLE qui est un paramètre)
 function closeModal() {
   const modal = document.getElementById("contact_modal");
@@ -13,15 +19,15 @@ function closeModal() {
 console.table(closeModal);
 
 // Ouverture de la modal
-function openModal() {
-  const modal = document.getElementById("contact_modal");
-  modal.style.display = "block";
-}
-console.table(openModal);
+// function openModal() {
+//   const modal = document.getElementById("contact_modal");
+//   modal.style.display = "block";
+// }
+// console.table(openModal);
 
-openModal.addEventListener("click", () => {
-  modal.show();
-});
+// openModal.addEventListener("click", () => {
+//   modal.show();
+// });
 
 // const contact_modal = document.getElementById("contact_modal");
 

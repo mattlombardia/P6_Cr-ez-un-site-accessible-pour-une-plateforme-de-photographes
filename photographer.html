@@ -25,23 +25,22 @@
     <section id="photographeInfos"></section>
 
     <!--Banner menu déroulant tri -->
-    <div id="bloc_tri">
-      <form id="bloc_form" action="/action_page.php">
-        <label for="tri">Trier par :</label>
-        <select name="tri" id="tri">
-          <option class="alltri" value="Popularité">Popularité</option>
-          <option class="alltri" value="Date">Date</option>
-          <option class="alltri" value="Titre">Titre</option>
-        </select>
-        <br /><br />
-      </form>
-    </div>
+    <section class="filter">
+      <h3 id="trierPar">Trier par</h3>
+      <select id="selectbox" class="filter-select">
+        <span>Popularité</span>
+        <option value="popularite">Popularité</option>
+        <option value="date">Date</option>
+        <option value="titre">Titre</option>
+      </select>
+        
+    </section>
 
     <!-- Section Album affichage médias -->
     <section id="mediaslist"></section>
 
     <!-- Modal contact -->
-    <div id="contact_modal">
+    <div id="contact_modal" class="contact_modal">
       <div class="modal">
         <header>
           <h2 id="button_contact">Contactez-moi</h2>

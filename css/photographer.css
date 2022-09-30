@@ -1,8 +1,22 @@
 /* MODAL  */
 
 /* Cacher le modal */
+
+.contact_modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 9999;
+}
+
 #contact_modal {
-  /* display: none; */
+  display: none;
 }
 
 #button_contact {
@@ -193,12 +207,37 @@ h2 {
 }
 
 * {
-  border-style: dotted;
+  /* border-style: dotted;
   border-color: rgb(139, 135, 135);
-  border-width: 1px;
+  border-width: 1px; */
 }
 
 /* MENU SELECT  */
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: start;
+    margin-left: 100px;
+    gap: 15px;
+  }
+
+.filter-select {
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        padding: 11px;
+        width: 170px;
+        height: 70px;
+        border: none;
+        background-color: #901C1C;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 150px;
+  }
+
+
 
 #bloc_tri {
   /* background-color: aqua; */
