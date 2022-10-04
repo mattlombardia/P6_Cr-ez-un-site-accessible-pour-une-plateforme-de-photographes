@@ -5,6 +5,7 @@ function displayModal() {
 }
 console.table(displayModal);
 
+// OUVERTURE / FERMETURE MODAL CONTACT
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
