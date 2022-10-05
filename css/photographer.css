@@ -240,11 +240,16 @@ h2 {
 
 
 #bloc_tri {
+    /* background-color: aqua; */
 }
 
 #bloc_form {
   display: flex;
   flex-direction: column;
+  /* min-height: 100px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  margin-top: 50px; */
   }
 
 #tri {
