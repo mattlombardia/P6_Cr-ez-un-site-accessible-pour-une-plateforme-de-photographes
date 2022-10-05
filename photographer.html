@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-      rel="stylesheet"
-    />
 
-    <title>Fisheye - Photographes</title>
-  </head>
+<head>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" />
 
-  <body id="body-photographer">
-    <header>
-      <img alt="logo du site" src="assets/images/logo.png" class="logo" />
-    </header>
+  <title>Fisheye - Photographes</title>
+</head>
 
-    <!-- Banner infos Photographers -->
-    <section id="photographeInfos"></section>
+<body id="body-photographer">
+  <header>
+    <img alt="logo du site" src="assets/images/logo.png" class="logo" />
+  </header>
 
-    <!--Banner menu déroulant tri -->
-    <section class="filter">
-      <h3 id="trierPar">Trier par</h3>
-      <select id="selectbox" class="filter-select">
-        <span>Popularité</span>
-        <option value="popularite">Popularité</option>
-        <option value="date">Date</option>
-        <option value="titre">Titre</option>
-      </select>
-        
-    </section>
+  <!-- Banner infos Photographers -->
+  <section id="photographeInfos"></section>
 
-    <!-- Section Album affichage médias -->
-    <section id="mediaslist"></section>
+  <!--Banner menu déroulant tri -->
+  <section class="filter">
+    <h3 id="trierPar">Trier par</h3>
+    <select id="selectbox" class="filter-select">
+      <span>Popularité</span>
+      <option value="popularite">Popularité</option>
+      <option value="date">Date</option>
+      <option value="titre">Titre</option>
+    </select>
+      
+  </section>
 
-    <!-- Modal contact -->
-    <div id="contact_modal" class="contact_modal">
-      <div class="modal">
-        <header>
-          <h2 id="button_contact">Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
-        </header>
-        <form>
-          <div>
-            <label>Prénom</label>
-            <input />
-            <label>Nom</label>
-            <input />
-            <label>Email</label>
-            <input />
-            <label>Votre message</label>
-            <textarea
-              id="w3review"
-              name="w3review"
-              rows="10"
-              cols="auto"
-            ></textarea>
-          </div>
-          <button class="contact_button">Envoyer</button>
-        </form>
-      </div>
+  <!-- Section Album affichage médias -->
+  <section id="mediaslist"></section>
+
+  <!-- Modal contact -->
+  <div id="contact_modal" class="contact_modal">
+    <div class="modal">
+      <header>
+        <h2 id="button_contact">Contactez-moi</h2>
+        <img src="assets/icons/close.svg" onclick="closeModal()" />
+      </header>
+      <form>
+        <div>
+          <label>Prénom</label>
+          <input />
+          <label>Nom</label>
+          <input />
+          <label>Email</label>
+          <input />
+          <label>Votre message</label>
+          <textarea id="w3review" name="w3review" rows="10" cols="auto"></textarea>
+        </div>
+        <button class="contact_button">Envoyer</button>
+      </form>
     </div>
+  </div>
 
-    <!-- Links to JS -->
-    <script src="scripts/pages/photographer.js"></script>
-    <script src="scripts/factories/photographer.js"></script>
-    <script src="scripts/utils/contactform.js"></script>
-  </body>
+  <!-- Links to JS -->
+  <script src="scripts/pages/photographer.js"></script>
+  <script src="scripts/factories/photographer.js"></script>
+  <script src="scripts/utils/contactform.js"></script>
+</body>
+
 </html>

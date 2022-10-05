@@ -4,7 +4,9 @@
 
 // pas variable, c'est une fonction fléchée () =>
 const getPhotographers = async () => {
-  const { photographers } = await fetch("./data/photographers.json").then(
+  const {
+    photographers
+  } = await fetch("./data/photographers.json").then(
     (response) => response.json()
   );
   return {
@@ -28,7 +30,9 @@ async function displayData(photographers) {
 // Function et (UNE VARIABABLE qui est un paramètre)
 async function init() {
   // Récupère les datas des photographes
-  const { photographers } = await getPhotographers();
+  const {
+    photographers
+  } = await getPhotographers();
   displayData(photographers);
 }
 console.table(init);
