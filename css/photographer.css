@@ -206,11 +206,11 @@ h2 {
   font-weight: normal;
 }
 
-* {
-  /* border-style: dotted;
+/* * {
+  border-style: dotted;
   border-color: rgb(139, 135, 135);
-  border-width: 1px; */
-}
+  border-width: 1px;
+} */
 
 /* MENU SELECT  */
 
@@ -219,10 +219,11 @@ h2 {
   flex-direction: row;
   align-items: baseline;
   justify-content: start;
-  margin-left: 100px;
   gap: 15px;
   margin: 10px;
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+
 }
 
 .filter-select {
@@ -234,14 +235,15 @@ h2 {
   height: 70px;
   border: none;
   background-color: #901C1C;
-
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
 
-#bloc_tri {
-  /* background-color: aqua; */
-}
+/* #bloc_tri {
+  background-color: aqua;
+} */
 
 #bloc_form {
   display: flex;
