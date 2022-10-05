@@ -57,5 +57,3 @@ function displayMedias(medias) {
 }
 
 init();
-
-/* Fonction factory */
