@@ -19,6 +19,13 @@ function closeModal() {
 }
 console.table(closeModal);
 
+// INSERTION NOM PHOTOGRAPHE DANS MODAL
+
+
+
+
+
+
 
 const modalBtn = document.querySelectorAll(".modal-btn");
 const modalclose = document.querySelector(".close");
@@ -71,6 +78,8 @@ const validateForm = (event) => {
     lastName: lastNameInput.value,
     email: emailInput.value,
   };
+  console.log(data)
+
 
 
   // Initialisation d'une liste d'erreurs vide
@@ -144,4 +153,8 @@ const confirmForm = (event) => {
 
   confirmButton.addEventListener("click", () => form.submit());
   modalclose.addEventListener("click", () => form.submit());
+
 };
+
+
+// FONCTION QUI APPELLE OBJET DATA
