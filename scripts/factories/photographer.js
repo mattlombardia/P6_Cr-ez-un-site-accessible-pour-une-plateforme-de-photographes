@@ -108,6 +108,8 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
+
+
   // photographer-page.html : layout affichage media
 
   // Function et (UNE VARIABABLE qui est un paramètre)

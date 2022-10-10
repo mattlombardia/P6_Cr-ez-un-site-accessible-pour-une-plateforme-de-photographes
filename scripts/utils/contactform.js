@@ -21,6 +21,16 @@ console.table(closeModal);
 
 // INSERTION NOM PHOTOGRAPHE DANS MODAL
 
+function namePhotographer(name) {
+  const h2 = document.createElement("h2");
+  h2.textContent = `${name}`;
+  ahref.appendChild(div);
+  article.appendChild(h2);
+  return ahref;
+
+}
+
+
 
 
 

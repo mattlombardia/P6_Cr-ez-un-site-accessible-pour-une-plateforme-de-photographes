@@ -38,12 +38,13 @@
   <div id="contact_modal" class="contact_modal">
     <div class="modal">
       <header>
-        <h2 id="button_contact">Contactez-moi</h2>
+        <h2 class="button_contact">Contactez-moi</h2>
+        <h2 class="button_contact">Photographe</h2>
         <img src="assets/icons/close.svg" onclick="closeModal()" />
       </header>
       <form>
-        <div>
 
+        <div>
           <label for="first">Prénom</label>
           <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2" /><br>
           <span class="error"></span>
@@ -60,6 +61,7 @@
             <label for="texte">Votre message</label><br>
             <textarea id="w3review" name="w3review" rows="10" cols="auto"></textarea>
         </div>
+
         <button class="contact_button">Envoyer</button>
       </form>
     </div>
