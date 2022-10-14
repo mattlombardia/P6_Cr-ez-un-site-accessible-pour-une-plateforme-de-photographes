@@ -108,6 +108,18 @@ function photographerFactory(data) {
     return mainInfos;
   }
 
+  function getModalTitle() {
+    const clickmodal = document.getElementById("clickmodal");
+
+    const h2 = document.createElement("h2");
+    h2.textContent = `Contactez-moi ${name}`;
+    h2.setAttribute("class", "button_contact");
+
+    clickmodal.appendChild(h2);
+
+    return clickmodal;
+
+  }
 
 
   // photographer-page.html : layout affichage media
@@ -194,7 +206,7 @@ function photographerFactory(data) {
     getUserCardDOM,
     getProfilePage,
     getMediaPage,
-    // getTriImg,
+    getModalTitle,
   };
 }
 

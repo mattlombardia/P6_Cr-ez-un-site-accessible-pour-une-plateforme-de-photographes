@@ -43,6 +43,7 @@ function displayData(photographer) {
   const profileModel = photographerFactory(photographer);
   const profiles = profileModel.getProfilePage();
   photographersSection.appendChild(profiles);
+  profileModel.getModalTitle()
 }
 
 // Fonction qui fait appraitre les médias
