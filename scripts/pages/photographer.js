@@ -34,6 +34,11 @@ async function init() {
   console.log(photographer);
   displayData(photographer.photographers);
   displayMedias(photographer.media);
+  selectbox.addEventListener("change", (e) => {
+    let photographerMediaList = mediaFilter(photographer.media, e.target.value);
+    console.log("photographer media", photographerMediaList);
+    medialist(photographerMediaList);
+  });
 }
 
 // Fonction appelée quand page chargée
