@@ -42,8 +42,8 @@
         <h2 class="button_contact">Photographe</h2> -->
         <img src="assets/icons/close.svg" onclick="closeModal()" />
       </header>
-      <form>
-
+      <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
+        onsubmit="return validate();">
         <div>
           <label for="first">Prénom</label>
           <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2" /><br>
