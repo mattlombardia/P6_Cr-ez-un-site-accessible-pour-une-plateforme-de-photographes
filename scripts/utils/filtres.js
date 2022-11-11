@@ -1,17 +1,14 @@
+// Création function pour le Tri/Filtre des médias
+
 function mediaFilter(mediaListArrayFiltered, photographerItem) {
 
     console.log(mediaListArrayFiltered, photographerItem);
-
-
-
 
     if (photographerItem === 'date') {
         const mediaListArrayFilteredByUser = mediaListArrayFiltered.sort(function (a, b) {
             return new Date(b.date) - new Date(a.date);
         });
         return mediaListArrayFilteredByUser;
-
-
     }
 
     if (photographerItem === 'popularite') {
@@ -23,8 +20,6 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
             return 0;
         });
         return mediaListArrayFilteredByUser;
-
-
     }
 
     if (photographerItem === 'titre') {
@@ -36,8 +31,5 @@ function mediaFilter(mediaListArrayFiltered, photographerItem) {
             return 0;
         });
         return mediaListArrayFilteredByUser;
-
-
     }
-
 }

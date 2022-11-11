@@ -34,9 +34,12 @@ async function init() {
   console.log(photographer);
   displayData(photographer.photographers);
   displayMedias(photographer.media);
+
+  // Création fonction pour "Tri/Filtre des médias" popularité, date, titre
   selectbox.addEventListener("change", (e) => {
     let photographerMediaList = mediaFilter(photographer.media, e.target.value);
     console.log("photographer media", photographerMediaList);
+    // Appel de la function Tri/Filtre
     displayMedias(photographerMediaList);
   });
 }
@@ -55,6 +58,7 @@ function displayData(photographer) {
 // Function et (UNE VARIABABLE qui est un paramètre)
 function displayMedias(medias) {
   const mediaslist = document.getElementById("mediaslist");
+  // Ajout medialist pour modifier le HTML
   mediaslist.innerHTML = "";
   medias.forEach((media) => {
     const mediaModel = photographerFactory(media);
