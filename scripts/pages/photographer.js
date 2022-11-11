@@ -37,7 +37,7 @@ async function init() {
   selectbox.addEventListener("change", (e) => {
     let photographerMediaList = mediaFilter(photographer.media, e.target.value);
     console.log("photographer media", photographerMediaList);
-    medialist(photographerMediaList);
+    displayMedias(photographerMediaList);
   });
 }
 
@@ -55,6 +55,7 @@ function displayData(photographer) {
 // Function et (UNE VARIABABLE qui est un paramètre)
 function displayMedias(medias) {
   const mediaslist = document.getElementById("mediaslist");
+  mediaslist.innerHTML = "";
   medias.forEach((media) => {
     const mediaModel = photographerFactory(media);
     const displaymedia = mediaModel.getMediaPage();
