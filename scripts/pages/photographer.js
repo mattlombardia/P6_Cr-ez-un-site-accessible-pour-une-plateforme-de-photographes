@@ -42,6 +42,17 @@ async function init() {
     // Appel de la function Tri/Filtre
     displayMedias(photographerMediaList);
   });
+
+  // Event to add likes
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('incrementLike')) {
+        incrementLike(e.target);
+      }
+    }
+  });
+
+
 }
 
 // Fonction appelée quand page chargée
