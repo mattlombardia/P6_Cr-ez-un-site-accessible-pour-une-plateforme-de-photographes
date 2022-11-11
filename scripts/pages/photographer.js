@@ -52,8 +52,22 @@ async function init() {
     }
   });
 
-
+  // Init Lightbox on click
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('lightboxMedia')) {
+      initLightbox();
+    }
+  });
+  // Init Lightbox with keyboard
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Enter') {
+      if (e.target.classList.contains('lightboxMedia')) {
+        initLightbox();
+      }
+    }
+  });
 }
+
 
 // Fonction appelée quand page chargée
 // Function et (UNE VARIABABLE qui est un paramètre)
