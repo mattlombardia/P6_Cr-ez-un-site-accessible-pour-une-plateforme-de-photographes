@@ -1,0 +1,96 @@
+.lightboxMedia {
+    border-radius: 5px;
+}
+
+
+#lightbox {
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+#lightbox #close {
+    color: #901C1C;
+    position: absolute;
+    top: 0px;
+    right: 40px;
+    font-size: 90px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+#lightbox .container {
+    text-align: center;
+}
+
+#lightbox .container img {
+    max-width: 100%;
+    max-height: 500px;
+}
+
+#lightbox .title {
+    color: white;
+}
+
+
+#lightbox video {
+    width: 50%;
+}
+
+/* permet de retirer la sélection du texte après un double clique */
+
+p,
+span.no_selection {
+    user-select: none;
+    /* standard syntax */
+    -webkit-user-select: none;
+    /* webkit (safari, chrome) browsers */
+    -moz-user-select: none;
+    /* mozilla browsers */
+    -khtml-user-select: none;
+    /* webkit (konqueror) browsers */
+    -ms-user-select: none;
+    /* IE10+ */
+}
+
+#lightbox .prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #901C1C;
+    font-weight: bold;
+    font-size: 35px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#lightbox .prev {
+    left: 40px;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* Position the "next button" to the right */
+#lightbox .next {
+    right: 40px;
+    border-radius: 3px 0 0 3px;
+}

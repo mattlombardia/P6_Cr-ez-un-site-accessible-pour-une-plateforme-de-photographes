@@ -33,15 +33,11 @@ function namePhotographer(name) {
 
 
 
-
-
-
-
 const modalBtn = document.querySelectorAll(".modal-btn");
-const modalclose = document.querySelector(".close");
+// const modalclose = document.querySelector(".close");
 
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
-modalclose.addEventListener("click", closeModal);
+// modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+// modalclose.addEventListener("click", closeModal);
 
 /* Récupération de tous les champs du formulaire ainsi que l'assignation à une constante */
 const firstNameInput = document.getElementById("first");
@@ -61,15 +57,15 @@ const resetFormData = () => {
 
 // launch modal event
 /* This is creating a modal that will be used to display the form data. */
-modalBtn.forEach((btn) =>
-  btn.addEventListener("click", () => (modalbg.style.display = "block"))
-);
-modalclose.addEventListener("click", () => {
-  resetFormData();
-  modalbg.style.display = "none";
-});
+// modalBtn.forEach((btn) =>
+//   btn.addEventListener("click", () => (modalbg.style.display = "block"))
+// );
+// modalclose.addEventListener("click", () => {
+//   resetFormData();
+//   modalbg.style.display = "none";
+// });
 
-const form = document.getElementById("reserveForm");
+const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => validateForm(event));
 

@@ -127,15 +127,15 @@ document.addEventListener("keydown", (e) => {
     }
     switch (e.key) {
         case 'ArrowLeft':
-            document.getElementById('previousMedia') ? .click();
+            document.getElementById('previousMedia') ? document.getElementById('previousMedia').click() : '';
             break;
 
         case 'ArrowRight':
-            document.getElementById('nextMedia') ? .click();
+            document.getElementById('nextMedia') ? document.getElementById('nextMedia').click() : '';
             break;
 
         case 'Escape':
-            document.getElementById('close') ? .click();
+            document.getElementById('close') ? document.getElementById('close').click() : '';
             break;
             // no default
     }
