@@ -137,6 +137,5 @@ document.addEventListener("keydown", (e) => {
         case 'Escape':
             document.getElementById('close') ? document.getElementById('close').click() : '';
             break;
-            // no default
     }
 });
