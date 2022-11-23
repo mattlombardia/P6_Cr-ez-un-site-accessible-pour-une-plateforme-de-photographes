@@ -127,7 +127,6 @@ function photographerFactory(data) {
   // Function et (UNE VARIABABLE qui est un paramètre)
   function getMediaPage() {
     const jpg = `assets/images/${image}`;
-
     const mp4 = `assets/images/${video}`;
 
     const album = document.createElement("article");
@@ -147,6 +146,7 @@ function photographerFactory(data) {
     const like = document.createElement("p");
     like.setAttribute("class", "like");
 
+
     const compteur = document.createElement("span");
     compteur.setAttribute("class", "compteur");
     compteur.textContent = `${likes} `;
@@ -155,6 +155,11 @@ function photographerFactory(data) {
     heart.setAttribute("aria-label", "likes");
     heart.setAttribute("class", "fas fa-heart incrementLike");
     heart.setAttribute("tabindex", "0");
+
+
+
+
+
 
     //  photographer-page.html : If JPG -> <img>
     if (jpg.split(".").pop() === "jpg") {
