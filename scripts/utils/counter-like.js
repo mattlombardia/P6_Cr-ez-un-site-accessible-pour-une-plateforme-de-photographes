@@ -11,9 +11,11 @@ document.addEventListener('click', (e) => {
 function incrementLike(coeurIcon) {
 
     const compteur = coeurIcon.parentNode.querySelector('.btnlike');
+    console.log(compteur)
     compteur.innerHTML = `${parseInt(compteur.innerHTML, 10) + 1} `;
 
     const compteurLikeTotal = document.querySelector('.compteurLikeTotal');
+    console.log(compteurLikeTotal)
     compteurLikeTotal.innerHTML = `${parseInt(compteurLikeTotal.innerHTML, 10) + 1} ` + '<span class=\'fas fa-heart\'></span>';
 }
 // Get likes of every media and add it to the sidebar
