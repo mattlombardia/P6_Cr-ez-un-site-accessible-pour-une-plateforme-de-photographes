@@ -1,16 +1,16 @@
 // Event to add likes
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('likeheart')) {
+    if (e.target.classList.contains('incrementLike')) {
 
         incrementLike(e.target);
     }
 });
 
-// Add ❤️ to "media/photograph"
+// Add ❤ to "media/photograph"
 // FUNCTION ET SON (PARAMETRE)
 function incrementLike(coeurIcon) {
 
-    const compteur = coeurIcon.parentNode.querySelector('.btnlike');
+    const compteur = coeurIcon.parentNode.querySelector('.compteur');
     console.log(compteur)
     compteur.innerHTML = `${parseInt(compteur.innerHTML, 10) + 1} `;
 
@@ -20,6 +20,7 @@ function incrementLike(coeurIcon) {
 }
 // Get likes of every media and add it to the sidebar
 function getTotalLikes(data) {
+    // console.log("data", data);
     let totalLikes = 0;
 
     data.forEach((media) => {
