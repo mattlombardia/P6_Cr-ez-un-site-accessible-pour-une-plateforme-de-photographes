@@ -96,6 +96,20 @@ function photographerFactory(data) {
     photographer_picture.setAttribute("class", "photographer_picture");
     photographer_picture.setAttribute("alt", name);
 
+    //compteur like total
+    const priceLikes = document.createElement("div");
+    priceLikes.setAttribute("class", "price");
+    const likesSpan = document.createElement("span");
+    likesSpan.setAttribute("class", "compteurLikeTotal");
+    console.log(likes);
+    likesSpan.textContent = likes;
+
+    const heart = document.createElement("span");
+    heart.setAttribute("aria-label", "likes");
+    heart.setAttribute("class", "fa fa-heart");
+    const priceDay = document.createElement("span");
+    priceDay.textContent = `${price}€ /jour`;
+
     // METHODE appendChild pour ajouter un nœud à la fin de la liste des enfants d'un nœud parent spécifié.
     mainInfos.appendChild(div);
     div.appendChild(nomPrenom);
@@ -104,6 +118,11 @@ function photographerFactory(data) {
 
     mainInfos.appendChild(contactButton);
     mainInfos.appendChild(photographer_picture);
+
+    mainInfos.appendChild(priceLikes);
+    priceLikes.appendChild(likesSpan);
+    likesSpan.appendChild(heart);
+    priceLikes.appendChild(priceDay);
 
     return mainInfos;
   }
@@ -216,13 +235,13 @@ function photographerFactory(data) {
 }
 
 // photographer-page.html - likes obtenus de tous  médias et ajout à la barre latérale sidebar
-function getTotalLikes() {
-  let totalLikes = 0;
+// function getTotalLikes() {
+//   let totalLikes = 0;
 
-  data.forEach((media) => {
-    totalLikes += media.likes;
-  });
-  // eslint-disable-next-line no-useless-concat
-  document.querySelector(".compteurLikeTotal").innerHTML =
-    `${totalLikes} ` + "<span class='fas fa-heart'></span>";
-}
+//   data.forEach((media) => {
+//     totalLikes += media.likes;
+//   });
+//   // eslint-disable-next-line no-useless-concat
+//   document.querySelector(".compteurLikeTotal").innerHTML =
+//     `${totalLikes} ` + "<span class='fas fa-heart'></span>";
+// }
