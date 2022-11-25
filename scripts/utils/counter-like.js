@@ -1,8 +1,15 @@
 // Event to add likes
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('incrementLike')) {
+        let tag = e.target;
+        if (tag.classList.contains('liked')) {
+            decrementLike(e.target);
+            tag.classList.remove('liked');
+        } else {
+            incrementLike(e.target);
+            tag.classList.add('liked');
+        }
 
-        incrementLike(e.target);
     }
 });
 
@@ -17,6 +24,17 @@ function incrementLike(coeurIcon) {
     const compteurLikeTotal = document.querySelector('.compteurLikeTotal');
     console.log(compteurLikeTotal)
     compteurLikeTotal.innerHTML = `${parseInt(compteurLikeTotal.innerHTML, 10) + 1} ` + '<span class=\'fas fa-heart\'></span>';
+}
+
+function decrementLike(coeurIcon) {
+
+    const compteur = coeurIcon.parentNode.querySelector('.compteur');
+    console.log(compteur)
+    compteur.innerHTML = `${parseInt(compteur.innerHTML, 10) - 1} `;
+
+    const compteurLikeTotal = document.querySelector('.compteurLikeTotal');
+    console.log(compteurLikeTotal)
+    compteurLikeTotal.innerHTML = `${parseInt(compteurLikeTotal.innerHTML, 10) - 1} ` + '<span class=\'fas fa-heart\'></span>';
 }
 // Get likes of every media and add it to the sidebar
 function getTotalLikes(data) {
