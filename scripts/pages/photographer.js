@@ -90,6 +90,7 @@ function displayMedias(medias) {
     const displaymedia = mediaModel.getMediaPage();
     mediaslist.appendChild(displaymedia);
   });
+  getTotalLikes(medias);
 }
 
 init();
