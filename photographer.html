@@ -26,7 +26,7 @@
   <!--Banner menu déroulant tri -->
   <section class="filter">
     <h3 id="trierPar">Trier par</h3>
-    <select id="selectbox" class="filter-select">
+    <select id="selectbox" class="filter-select" aria-label="Tri-images">
       <span>Popularité</span>
       <option value="popularite">Popularité</option>
       <option value="date">Date</option>
@@ -44,7 +44,7 @@
       <header id="clickmodal">
         <!-- <h2 class="button_contact">Contactez-moi</h2>
         <h2 class="button_contact">Photographe</h2> -->
-        <img src="assets/icons/close.svg" onclick="closeModal()" />
+        <img src="assets/icons/close.svg" alt="icone pour fermer la modal" onclick="closeModal()" />
       </header>
       <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
         onsubmit="return validate();">
@@ -63,7 +63,7 @@
             <span class="error"></span>
 
             <label for="texte">Votre message</label><br>
-            <textarea id="w3review" name="w3review" rows="10" cols="auto"></textarea>
+            <textarea id="w3review" name="w3review" rows="10" cols="auto" aria-label="texte"></textarea>
         </div>
 
         <button class="contact_button">Envoyer</button>
