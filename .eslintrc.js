@@ -7,8 +7,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:react/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
@@ -16,6 +15,5 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "rules": {
-    }
+    "rules": {}
 }
