@@ -2,11 +2,11 @@
 <html lang="fr">
 
 <head>
-  <link href="css/style.css" rel="stylesheet" type="text/css" />
-  <meta charset="utf-8" />
-  <link rel="icon" type="image/png" href="assets/favicon.png" />
-  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet" />
-  <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
   <link rel="stylesheet" href="css/lightbox.css" type="text/css">
 
   <title>Fisheye - Photographes</title>
@@ -14,13 +14,13 @@
 
 <body id="body-photographer">
   <header>
-    <a href="/index.html"><img alt="logo du site" src="assets/images/logo.png" class="logo" /></a>
+    <a href="/index.html"><img alt="logo du site" src="assets/images/logo.png" class="logo"></a>
   </header>
 
   <!-- Banner infos Photographers -->
   <section id="photographeInfos"></section>
-  <div id="lightbox">
 
+  <div id="lightbox">
   </div>
 
   <!--Banner menu déroulant tri -->
@@ -44,22 +44,22 @@
       <header id="clickmodal">
         <!-- <h2 class="button_contact">Contactez-moi</h2>
         <h2 class="button_contact">Photographe</h2> -->
-        <img src="assets/icons/close.svg" alt="icone pour fermer la modal" onclick="closeModal()" />
+        <img src="assets/icons/close.svg" alt="icone pour fermer la modal" onclick="closeModal()">
       </header>
       <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
         onsubmit="return validate();">
         <div>
           <label for="first">Prénom</label>
-          <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2" /><br>
+          <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2"><br>
           <span class="error"></span>
 
           <label for="last">Nom</label><br>
-          <input class="text-control" type="text" autocomplete="off" id="last" name="last" /><br>
+          <input class="text-control" type="text" autocomplete="off" id="last" name="last"><br>
           <span class="error">
 
 
             <label for="email">E-mail</label><br>
-            <input class="text-control" type="email" autocomplete="off" id="email" name="email" /><br>
+            <input class="text-control" type="email" autocomplete="off" id="email" name="email"><br>
             <span class="error"></span>
 
             <label for="texte">Votre message</label><br>
