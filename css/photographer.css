@@ -272,3 +272,20 @@ form label {
 .alltri {
   cursor: pointer;
 }
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  right: 15px;
+  bottom: 0px;
+  padding: 5px;
+  background-color: #D3573C;
+  color: #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 215px;
+  height: 50px;
+  font-size: 25px;
+}

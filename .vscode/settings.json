@@ -31,5 +31,6 @@
     "editor.tokenColorCustomizations": {
     
     },
-    "peacock.color": "#383e42"
+    "peacock.color": "#383e42",
+    "liveServer.settings.port": 5501
 }
