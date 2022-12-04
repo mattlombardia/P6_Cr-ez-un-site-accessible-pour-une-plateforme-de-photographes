@@ -19,13 +19,15 @@
   </header>
 
   <!-- Banner infos Photographers -->
-  <section id="photographeInfos"></section>
+
+  <div id="photographeInfos"></div>
+
 
   <div id="lightbox">
   </div>
 
   <!--Banner menu déroulant tri -->
-  <section class="filter">
+  <div class="filter">
     <h3 id="trierPar">Trier par</h3>
     <select id="selectbox" class="filter-select" aria-label="Tri-images">
       <!-- <span>Popularité</span> -->
@@ -34,10 +36,10 @@
       <option value="titre">Titre</option>
     </select>
       
-  </section>
+  </div>
 
   <!-- Section Album affichage médias -->
-  <section id="mediaslist"></section>
+  <div id="mediaslist"></div>
 
   <!-- Modal contact -->
   <div id="contact_modal" class="contact_modal">
@@ -49,25 +51,22 @@
       </header>
       <form class="form" id="form" name="formulaire" action="photographer.html" method="post"
         onsubmit="return validate();">
-        <div>
-          <label for="first">Prénom</label>
-          <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2"><br>
+        <label for="first">Prénom</label>
+        <input class="text-control" type="text" autocomplete="off" id="first" name="first" minlength="2"><br>
+        <span class="error"></span>
+
+        <label for="last">Nom</label><br>
+        <input class="text-control" type="text" autocomplete="off" id="last" name="last"><br>
+        <span class="error">
+
+
+          <label for="email">E-mail</label><br>
+          <input class="text-control" type="email" autocomplete="off" id="email" name="email"><br>
           <span class="error"></span>
 
-          <label for="last">Nom</label><br>
-          <input class="text-control" type="text" autocomplete="off" id="last" name="last"><br>
-          <span class="error">
-
-
-            <label for="email">E-mail</label><br>
-            <input class="text-control" type="email" autocomplete="off" id="email" name="email"><br>
-            <span class="error"></span>
-
-            <label for="texte">Votre message</label><br>
-            <textarea id="w3review" name="w3review" rows="10" cols="auto" aria-label="texte"></textarea>
-        </div>
-
-        <button class="contact_button">Envoyer</button>
+          <label for="texte">Votre message</label><br>
+          <textarea id="w3review" name="w3review" rows="10" cols="auto" aria-label="texte"></textarea>
+          <button class="contact_button">Envoyer</button>
       </form>
     </div>
   </div>
