@@ -43,7 +43,7 @@ const modalBtn = document.querySelectorAll(".modal-btn");
 const firstNameInput = document.getElementById("first");
 const lastNameInput = document.getElementById("last");
 const emailInput = document.getElementById("email");
-const textArea = document.getElementById("text");
+const textAreaInput = document.getElementById("w3review");
 
 let data = {};
 
@@ -51,7 +51,7 @@ const resetFormData = () => {
   firstNameInput.value = "";
   lastNameInput.value = "";
   emailInput.value = "";
-  textArea.value = "";
+  textAreaInput.value = "";
 
 };
 
@@ -83,6 +83,7 @@ const validateForm = (event) => {
     firstName: firstNameInput.value,
     lastName: lastNameInput.value,
     email: emailInput.value,
+    textArea: textAreaInput.value,
   };
   console.log(data)
 
@@ -117,6 +118,7 @@ const validateForm = (event) => {
     null;
 
   // TEXTE AREA
+  console.log(data.textArea)
   data.textArea.length < 10 ?
     errors.push([
       textAreaInput,
@@ -125,10 +127,10 @@ const validateForm = (event) => {
     null;
 
 
-  formData.forEach((element) => {
-    element.setAttribute("data-error-visible", false);
-    element.setAttribute("data-error", "");
-  });
+  // data.forEach((element) => {
+  //   element.setAttribute("data-error-visible", false);
+  //   element.setAttribute("data-error", "");
+  // });
 
   errors.forEach((error) => {
     const element = error[0];
@@ -151,14 +153,14 @@ const confirmForm = (event) => {
   event.preventDefault();
   console.log("Validations effectuées");
   form.style.display = "none";
-  const endModal = document.getElementById("end-modal");
-  const confirmButton = document.getElementById("mess-end");
+  const endModal = document.getElementById("contact_modal");
+  // const confirmButton = document.getElementById("mess-end");
 
   endModal.style.display = "block";
   endModal.style.paddingBottom = "16px";
 
-  confirmButton.addEventListener("click", () => form.submit());
-  modalclose.addEventListener("click", () => form.submit());
+  // confirmButton.addEventListener("click", () => form.submit());
+  // modalclose.addEventListener("click", () => form.submit());
 
 };
 

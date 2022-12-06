@@ -28,7 +28,7 @@
 
   <!--Banner menu déroulant tri -->
   <div class="filter">
-    <h3 id="trierPar">Trier par</h3>
+    <label for="selectbox" id="trierPar">Trier par</label>
     <select id="selectbox" class="filter-select" aria-label="Tri-images">
       <!-- <span>Popularité</span> -->
       <option value="popularite">Popularité</option>
@@ -64,8 +64,8 @@
         <input class="text-control" type="email" autocomplete="off" id="email" name="email"><br>
         <span class="error"></span>
 
-        <label>Votre message</label><br>
-        <textarea id="w3review" name="w3review" rows="10" cols="auto" aria-label="texte"></textarea><br>
+        <label for="w3review">Votre message</label><br>
+        <textarea id="w3review" name="w3review" rows="10" cols="60" aria-label="texte"></textarea><br>
         <button class="contact_button">Envoyer</button>
       </form>
     </div>
