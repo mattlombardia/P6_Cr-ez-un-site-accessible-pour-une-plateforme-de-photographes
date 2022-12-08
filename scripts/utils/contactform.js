@@ -157,7 +157,7 @@ const confirmForm = (event) => {
   const endModal = document.getElementById("contact_modal");
   // const confirmButton = document.getElementById("mess-end");
 
-  endModal.style.display = "block";
+  endModal.style.display = "none";
   endModal.style.paddingBottom = "16px";
 
   // confirmButton.addEventListener("click", () => form.submit());
