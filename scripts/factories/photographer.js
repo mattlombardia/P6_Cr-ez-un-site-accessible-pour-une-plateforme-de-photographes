@@ -108,7 +108,7 @@ function photographerFactory(data) {
     heart.setAttribute("aria-label", "likes");
     heart.setAttribute("class", "fa fa-heart");
     const priceDay = document.createElement("span");
-    priceDay.textContent = `${price}€ /jour`;
+    priceDay.textContent = `${price}€ / jour`;
 
     // METHODE appendChild pour ajouter un nœud à la fin de la liste des enfants d'un nœud parent spécifié.
     mainInfos.appendChild(div);

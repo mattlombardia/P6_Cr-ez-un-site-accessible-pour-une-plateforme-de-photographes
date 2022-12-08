@@ -13,6 +13,7 @@ document.addEventListener("keydown", (e) => {
 });
 
 // Function et (UNE VARIABABLE qui est un paramètre)
+// CLOSE MODAL
 function closeModal() {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "none";

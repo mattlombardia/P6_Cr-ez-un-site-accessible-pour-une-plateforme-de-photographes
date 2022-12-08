@@ -2,7 +2,9 @@
 
 //  "URL Search Params" Method
 
+
 // Function et (UNE VARIABABLE qui est un paramètre)
+// Récupère l'ID du photographe
 async function getPhotographer() {
   const str = window.location.href;
   const url = new URL(str);

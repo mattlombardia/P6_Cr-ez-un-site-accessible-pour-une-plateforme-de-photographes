@@ -35,7 +35,7 @@ async function init() {
   } = await getPhotographers();
   displayData(photographers);
 }
-console.table(init);
+console.log(init);
 
 // Fonction appelée quand page chargée
 
