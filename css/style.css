@@ -45,6 +45,7 @@ h1 {
     justify-content: center;
     align-items: center;
     align-content: flex-start;
+    margin: 0%;
 
 
 }
@@ -70,7 +71,7 @@ h1 {
 }
 
 .photographer_section article p {
-    color: grey;
+    color: rgb(114, 113, 113);
     font-size: 12px;
     font-weight: lighter;
     text-align: center;
@@ -91,5 +92,32 @@ h1 {
 .location {
     color: #901C1C;
 }
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* COMMENTS */
