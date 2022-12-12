@@ -11,7 +11,7 @@
   top: 0;
   bottom: 0;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   z-index: 9999;
 }
 
@@ -21,6 +21,8 @@
 
 .button_contact {
   color: #000000;
+  text-align: left !important;
+
 }
 
 .photograph-header {
@@ -154,6 +156,12 @@ form input {
   cursor: pointer;
 }
 
+#clickmodal {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-bottom: 50px;
+}
+
 .photographer_modal:hover {
   background-color: #db8876;
   color: rgb(0, 0, 0);
@@ -264,10 +272,16 @@ h2 {
 }
 
 form label {
-  color: #000000;
-  font-size: 18px;
+  color: #312E2E;
+  font-size: 20px;
   font-weight: bold;
   font-family: "DM Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 .alltri {
