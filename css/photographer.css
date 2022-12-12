@@ -17,6 +17,11 @@
 
 #contact_modal {
   display: none;
+
+}
+
+#contact-message {
+  height: 150px;
 }
 
 .button_contact {
@@ -66,9 +71,11 @@
 }
 
 .modal header h2 {
-  font-size: 49px;
-  font-weight: normal;
+  font-size: 250%;
+  font-weight: bold;
   text-align: center;
+  padding-top: 15px;
+
 }
 
 form {
