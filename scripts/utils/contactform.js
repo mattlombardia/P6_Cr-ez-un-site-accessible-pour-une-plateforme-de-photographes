@@ -2,6 +2,9 @@
 function displayModal() {
   const modal = document.getElementById("contact_modal");
   modal.style.display = "block";
+  const first = document.getElementById('first');
+  first.focus();
+
 }
 console.table(displayModal);
 
