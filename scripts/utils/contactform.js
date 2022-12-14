@@ -78,10 +78,10 @@ form.addEventListener("submit", (event) => validateForm(event));
 // Création d'une fonction de validation du formulaire avec comme paramètre event
 // @event l'evenement du formulaire (l'envoi et les présumés données)
 
-const validateForm = (event) => {
+const validateForm = () => {
   // la fonction preventDefault() annule l'action de l'évènement :
   // ex : lorsque l'on va appuyer sur le bouton submit, le fomulaire ne s'enverra pas
-  event.preventDefault();
+
 
   data = {
     firstName: firstNameInput.value,
@@ -147,14 +147,15 @@ const validateForm = (event) => {
   console.log(data);
 
   if (errors.length <= 0) {
-    confirmForm(event);
+    confirmForm();
   }
+  return false;
 };
 
 // envoi confirmation
 
-const confirmForm = (event) => {
-  event.preventDefault();
+const confirmForm = () => {
+  // event.preventDefault();
   console.log("Validations effectuées");
   form.style.display = "none";
   const endModal = document.getElementById("contact_modal");
